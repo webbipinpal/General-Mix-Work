@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+<style type="text/css">
+.wrapper{ width:960px; margin:30px auto;}
+input{ padding:5px 8px; border:1px solid #ccc;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<div ng-app="">
+	<h1>Get input value</h1>
+	<input type="text" ng-model="name" placeholder="Enter your Name">
+	<h4>Hello {{name}}</h4>
+	
+	<hr />
+	<div ng-init="myName='Bipin Kumar Pal'">
+	<p>My Name is <span ng-bind="myName"></span></p>
+	</div>
+
+</div>
+
+
+
+
+</div>
+</body>
+<html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+<style type="text/css">
+.wrapper{ width:960px; margin:30px auto;}
+input{ padding:5px 8px; border:1px solid #ccc;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+	<div ng-app="myCurrency" ng-controller="currencyCtrl">
+		<h3>Price {{price | currency}}</h3>
+	</div>
+
+</div>
+<script>
+angular.module('myCurrency', []).controller('currencyCtrl', function($scope){
+	$scope.price='58';
+
+});
+
+
+</script>
+</body>
+<html>

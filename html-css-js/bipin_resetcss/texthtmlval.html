@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+$("#btn1").click(function(){
+alert("text:" + $("#p1").text());
+});
+
+
+$("#btn2").click(function(){
+alert("text:" + $("#p1").html());
+});
+
+
+$("#btn3").click(function(){
+alert("value:" + $("#test").val());
+});
+
+});
+
+
+</script>
+</head>
+<body>
+
+<input type="text" id="test" value="Mickey Mouse">
+<p id="p1" value="132321">This is a <b>paragraph</b> with little content.56546</p>
+<button id="btn1">show text</button>
+<button id="btn2">show html</button>
+<button id="btn3">show val</button>
+
+</body>
+</html>

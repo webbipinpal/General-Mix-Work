@@ -1,0 +1,1765 @@
+ /*Proto Type CSS Framework Block Starts here...*/
+   
+   
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+body {
+  background-color: transparent;
+  font-family: Verdana,Arial,sans-serif;        
+  font-size: 1em;
+  color: black;
+}
+
+
+ol,ul {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  padding: 0;
+}
+ul li ul {
+  margin-bottom: 0;
+}
+ol li ol {
+  margin-bottom: 0;
+}
+
+*, :before, :after {
+	box-sizing:border-box
+}
+/*Container Starts here...*/
+.content_column {
+	margin-left:auto;
+	margin-right:auto;
+	padding-left:10px;
+	padding-right:10px;
+}
+.content_column:before, .content_column:after {
+	content:"";
+	display:table
+}
+.content_column:after {
+	clear:both
+}
+@media (min-width:768px) {
+.content_column {
+	width:748px
+}
+}
+ @media (min-width:960px) {
+.content_column {
+	width:930px
+}
+}
+ @media (min-width:1040px) {
+.content_column {
+	width:1000px
+}
+}
+.content_row {
+	margin-left:-10px;
+	margin-right:-10px;
+}
+.content_row:before, .content_row:after {
+	content:"";
+	display:table
+}
+.content_row:after {
+	clear:both
+}
+.content_row:before, .content_row:after {
+	content:"";
+	display:table
+}
+.content_row:after {
+	clear:both
+}
+.whole, .whole-md, .whole-lg, .one_half, .one_half-md, .one_half-lg, .one_third, .one_third-md, .one_third-lg, .two_thirds, .two_thirds-md, .two_thirds-lg, .one_fourth, .one_fourth-md, .one_fourth-lg, .three_fourths, .three_fourths-md, .three_fourths-lg, .one_fifth, .one_fifth-md, .one_fifth-lg, .two_fifths, .two_fifths-md, .two_fifths-lg, .three_fifths, .three_fifths-md, .three_fifths-lg, .four_fifths, .four_fifths-md, .four_fifths-lg, .one_sixth, .one_sixth-md, .one_sixth-lg, .two_sixths, .two_sixths-md, .two_sixths-lg, .three_sixths, .three_sixths-md, .three_sixths-lg, .four_sixths, .four_sixths-md, .four_sixths-lg, .five_sixths, .five_sixths-md, .five_sixths-lg, .one_eighth, .one_eighth-md, .one_eighth-lg, .two_eighths, .two_eighths-md, .two_eighths-lg, .three_eighths, .three_eighths-md, .three_eighths-lg, .four_eighths, .four_eighths-md, .four_eighths-lg, .five_eighths, .five_eighths-md, .five_eighths-lg, .six_eighths, .six_eighths-md, .six_eighths-lg, .seven_eighths, .seven_eighths-md, .seven_eighths-lg, .one_twelfth, .one_twelfth-md, .one_twelfth-lg, .two_twelfths, .two_twelfths-md, .two_twelfths-lg, .three_twelfths, .three_twelfths-md, .three_twelfths-lg, .four_twelfths, .four_twelfths-md, .four_twelfths-lg, .five_twelfths, .five_twelfths-md, .five_twelfths-lg, .six_twelfths, .six_twelfths-md, .six_twelfths-lg, .seven_twelfths, .seven_twelfths-md, .seven_twelfths-lg, .eight_twelfths, .eight_twelfths-md, .eight_twelfths-lg, .nine_twelfths, .nine_twelfths-md, .nine_twelfths-lg, .ten_twelfths, .ten_twelfths-md, .ten_twelfths-lg, .eleven_twelfths, .eleven_twelfths-md, .eleven_twelfths-lg {
+	min-height:1px;
+	padding-left:10px;
+	padding-right:10px;
+	position:relative
+}
+/*Responsiveness Starts here...*/
+.whole, .one_half, .one_third, .two_thirds, .one_fourth, .three_fourths, .one_fifth, .two_fifths, .three_fifths, .four_fifths, .one_sixth, .two_sixths, .three_sixths, .four_sixths, .five_sixths, .one_eighth, .two_eighths, .three_eighths, .four_eighths, .five_eighths, .six_eighths, .seven_eighths, .one_twelfth, .two_twelfths, .three_twelfths, .four_twelfths, .five_twelfths, .six_twelfths, .seven_twelfths, .eight_twelfths, .nine_twelfths, .ten_twelfths, .eleven_twelfths {
+	float:left
+}
+.whole {
+	width:100%
+}
+.one_half {
+	width:50%
+}
+.one_third {
+	width:33.3333%
+}
+.two_thirds {
+	width:66.6667%
+}
+.one_fourth {
+	width:25%
+}
+.three_fourths {
+	width:75%
+}
+.one_fifth {
+	width:20%
+}
+.two_fifths {
+	width:40%
+}
+.three_fifths {
+	width:60%
+}
+.four_fifths {
+	width:80%
+}
+.one_sixth {
+	width:16.6667%
+}
+.two_sixths {
+	width:33.3333%
+}
+.three_sixths {
+	width:50%
+}
+.four_sixths {
+	width:66.6667%
+}
+.five_sixths {
+	width:83.3333%
+}
+.one_eighth {
+	width:12.5%
+}
+.two_eighths {
+	width:25%
+}
+.three_eighths {
+	width:37.5%
+}
+.four_eighths {
+	width:50%
+}
+.five_eighths {
+	width:62.5%
+}
+.six_eighths {
+	width:75%
+}
+.seven_eighths {
+	width:87.5%
+}
+.one_twelfth {
+	width:8.333%
+}
+.two_twelfths {
+	width:16.666%
+}
+.three_twelfths {
+	width:25%
+}
+.four_twelfths {
+	width:33.333%
+}
+.five_twelfths {
+	width:41.6667%
+}
+.six_twelfths {
+	width:50%
+}
+.seven_twelfths {
+	width:58.3334%
+}
+.eight_twelfths {
+	width:66.666%
+}
+.nine_twelfths {
+	width:75%
+}
+.ten_twelfths {
+	width:83.3334%
+}
+.eleven_twelfths {
+	width:91.666%
+}
+/*Pull Starts here...*/
+.whole_pull {
+	right:100%
+}
+.one_half_pull {
+	right:50%
+}
+.one_third_pull {
+	right:33.3333%
+}
+.two_thirds_pull {
+	right:66.6667%
+}
+.one_fourth_pull {
+	right:25%
+}
+.three_fourths_pull {
+	right:75%
+}
+.one_fifth_pull {
+	right:20%
+}
+.two_fifths_pull {
+	right:40%
+}
+.three_fifths_pull {
+	right:60%
+}
+.four_fifths_pull {
+	right:80%
+}
+.one_sixth_pull {
+	right:16.6667%
+}
+.two_sixths_pull {
+	right:33.3333%
+}
+.three_sixths_pull {
+	right:50%
+}
+.four_sixths_pull {
+	right:66.6667%
+}
+.five_sixths_pull {
+	right:83.3333%
+}
+.one_eighth_pull {
+	right:12.5%
+}
+.two_eighths_pull {
+	right:25%
+}
+.three_eighths_pull {
+	right:37.5%
+}
+.four_eighths_pull {
+	right:50%
+}
+.five_eighths_pull {
+	right:62.5%
+}
+.six_eighths_pull {
+	right:75%
+}
+.seven_eighths_pull {
+	right:87.5%
+}
+.one_twelfth_pull {
+	right:8.333%
+}
+.two_twelfths_pull {
+	right:16.666%
+}
+.three_twelfths_pull {
+	right:25%
+}
+.four_twelfths_pull {
+	right:33.333%
+}
+.five_twelfths_pull {
+	right:41.6667%
+}
+.six_twelfths_pull {
+	right:50%
+}
+.seven_twelfths_pull {
+	right:58.3334%
+}
+.eight_twelfths_pull {
+	right:66.666%
+}
+.nine_twelfths_pull {
+	right:75%
+}
+.ten_twelfths_pull {
+	right:83.3334%
+}
+.eleven_twelfths_pull {
+	right:91.666%
+}
+/*Push Starts here...*/
+.whole_push {
+	left:100%
+}
+.one_half_push {
+	left:50%
+}
+.one_third_push {
+	left:33.3333%
+}
+.two_thirds_push {
+	left:66.6667%
+}
+.one_fourth_push {
+	left:25%
+}
+.three_fourths_push {
+	left:75%
+}
+.one_fifth_push {
+	left:20%
+}
+.two_fifths_push {
+	left:40%
+}
+.three_fifths_push {
+	left:60%
+}
+.four_fifths_push {
+	left:80%
+}
+.one_sixth_push {
+	left:16.6667%
+}
+.two_sixths_push {
+	left:33.3333%
+}
+.three_sixths_push {
+	left:50%
+}
+.four_sixths_push {
+	left:66.6667%
+}
+.five_sixths_push {
+	left:83.3333%
+}
+.one_eighth_push {
+	left:12.5%
+}
+.two_eighths_push {
+	left:25%
+}
+.three_eighths_push {
+	left:37.5%
+}
+.four_eighths_push {
+	left:50%
+}
+.five_eighths_push {
+	left:62.5%
+}
+.six_eighths_push {
+	left:75%
+}
+.seven_eighths_push {
+	left:87.5%
+}
+.one_twelfth_push {
+	left:8.333%
+}
+.two_twelfths_push {
+	left:16.666%
+}
+.three_twelfths_push {
+	left:25%
+}
+.four_twelfths_push {
+	left:33.333%
+}
+.five_twelfths_push {
+	left:41.6667%
+}
+.six_twelfths_push {
+	left:50%
+}
+.seven_twelfths_push {
+	left:58.3334%
+}
+.eight_twelfths_push {
+	left:66.666%
+}
+.nine_twelfths_push {
+	left:75%
+}
+.ten_twelfths_push {
+	left:83.3334%
+}
+.eleven_twelfths_push {
+	left:91.666%
+}
+/*Offset Starts here...*/
+.whole_offset {
+	margin-left:100%
+}
+.one_half_offset {
+	margin-left:50%
+}
+.one_third_offset {
+	margin-left:33.3333%
+}
+.two_thirds_offset {
+	margin-left:66.6667%
+}
+.one_fourth_offset {
+	margin-left:25%
+}
+.three_fourths_offset {
+	margin-left:75%
+}
+.one_fifth_offset {
+	margin-left:20%
+}
+.two_fifths_offset {
+	margin-left:40%
+}
+.three_fifths_offset {
+	margin-left:60%
+}
+.four_fifths_offset {
+	margin-left:80%
+}
+.one_sixth_offset {
+	margin-left:16.6667%
+}
+.two_sixths_offset {
+	margin-left:33.3333%
+}
+.three_sixths_offset {
+	margin-left:50%
+}
+.four_sixths_offset {
+	margin-left:66.6667%
+}
+.five_sixths_offset {
+	margin-left:83.3333%
+}
+.one_eighth_offset {
+	margin-left:12.5%
+}
+.two_eighths_offset {
+	margin-left:25%
+}
+.three_eighths_offset {
+	margin-left:37.5%
+}
+.four_eighths_offset {
+	margin-left:50%
+}
+.five_eighths_offset {
+	margin-left:62.5%
+}
+.six_eighths_offset {
+	margin-left:75%
+}
+.seven_eighths_offset {
+	margin-left:87.5%
+}
+.one_twelfth_offset {
+	margin-left:8.333%
+}
+.two_twelfths_offset {
+	margin-left:16.666%
+}
+.three_twelfths_offset {
+	margin-left:25%
+}
+.four_twelfths_offset {
+	margin-left:33.333%
+}
+.five_twelfths_offset {
+	margin-left:41.6667%
+}
+.six_twelfths_offset {
+	margin-left:50%
+}
+.seven_twelfths_offset {
+	margin-left:58.3334%
+}
+.eight_twelfths_offset {
+	margin-left:66.666%
+}
+.nine_twelfths_offset {
+	margin-left:75%
+}
+.ten_twelfths_offset {
+	margin-left:83.3334%
+}
+.eleven_twelfths_offset {
+	margin-left:91.666%
+}
+/*Responsiveness small screen starts here...*/
+@media (min-width: 768px) {
+/*Columns Starts here...*/
+.whole-md, .one_half-md, .one_third-md, .two_thirds-md, .one_fourth-md, .three_fourths-md, .one_fifth-md, .two_fifths-md, .three_fifths-md, .four_fifths-md, .one_sixth-md, .two_sixths-md, .three_sixths-md, .four_sixths-md, .five_sixths-md, .one_eighth-md, .two_eighths-md, .three_eighths-md, .four_eighths-md, .five_eighths-md, .six_eighths-md, .seven_eighths-md, .one_twelfth-md, .two_twelfths-md, .three_twelfths-md, .four_twelfths-md, .five_twelfths-md, .six_twelfths-md, .seven_twelfths-md, .eight_twelfths-md, .nine_twelfths-md, .ten_twelfths-md, .eleven_twelfths-md {
+	float:left
+}
+.whole-md {
+	width:100%
+}
+.one_half-md {
+	width:50%
+}
+.one_third-md {
+	width:33.3333%
+}
+.two_thirds-md {
+	width:66.6667%
+}
+.one_fourth-md {
+	width:25%
+}
+.three_fourths-md {
+	width:75%
+}
+.one_fifth-md {
+	width:20%
+}
+.two_fifths-md {
+	width:40%
+}
+.three_fifths-md {
+	width:60%
+}
+.four_fifths-md {
+	width:80%
+}
+.one_sixth-md {
+	width:16.6667%
+}
+.two_sixths-md {
+	width:33.3333%
+}
+.three_sixths-md {
+	width:50%
+}
+.four_sixths-md {
+	width:66.6667%
+}
+.five_sixths-md {
+	width:83.3333%
+}
+.one_eighth-md {
+	width:12.5%
+}
+.two_eighths-md {
+	width:25%
+}
+.three_eighths-md {
+	width:37.5%
+}
+.four_eighths-md {
+	width:50%
+}
+.five_eighths-md {
+	width:62.5%
+}
+.six_eighths-md {
+	width:75%
+}
+.seven_eighths-md {
+	width:87.5%
+}
+.one_twelfth-md {
+	width:8.333%
+}
+.two_twelfths-md {
+	width:16.666%
+}
+.three_twelfths-md {
+	width:25%
+}
+.four_twelfths-md {
+	width:33.333%
+}
+.five_twelfths-md {
+	width:41.6667%
+}
+.six_twelfths-md {
+	width:50%
+}
+.seven_twelfths-md {
+	width:58.3334%
+}
+.eight_twelfths-md {
+	width:66.666%
+}
+.nine_twelfths-md {
+	width:75%
+}
+.ten_twelfths-md {
+	width:83.3334%
+}
+.eleven_twelfths-md {
+	width:91.666%
+}
+/*Pull Starts here...*/
+.whole_pull-md {
+	right:100%
+}
+.one_half_pull-md {
+	right:50%
+}
+.one_third_pull-md {
+	right:33.3333%
+}
+.two_thirds_pull-md {
+	right:66.6667%
+}
+.one_fourth_pull-md {
+	right:25%
+}
+.three_fourths_pull-md {
+	right:75%
+}
+.one_fifth_pull-md {
+	right:20%
+}
+.two_fifths_pull-md {
+	right:40%
+}
+.three_fifths_pull-md {
+	right:60%
+}
+.four_fifths_pull-md {
+	right:80%
+}
+.one_sixth_pull-md {
+	right:16.6667%
+}
+.two_sixths_pull-md {
+	right:33.3333%
+}
+.three_sixths_pull-md {
+	right:50%
+}
+.four_sixths_pull-md {
+	right:66.6667%
+}
+.five_sixths_pull-md {
+	right:83.3333%
+}
+.one_eighth_pull-md {
+	right:12.5%
+}
+.two_eighths_pull-md {
+	right:25%
+}
+.three_eighths_pull-md {
+	right:37.5%
+}
+.four_eighths_pull-md {
+	right:50%
+}
+.five_eighths_pull-md {
+	right:62.5%
+}
+.six_eighths_pull-md {
+	right:75%
+}
+.seven_eighths_pull-md {
+	right:87.5%
+}
+.one_twelfth_pull-md {
+	right:8.333%
+}
+.two_twelfths_pull-md {
+	right:16.666%
+}
+.three_twelfths_pull-md {
+	right:25%
+}
+.four_twelftsh_pull-md {
+	right:33.333%
+}
+.five_twelfths_pull-md {
+	right:41.6667%
+}
+.six_twelfths_pull-md {
+	right:50%
+}
+.seven_twelfths_pull-md {
+	right:58.3334%
+}
+.eight_twelfths_pull-md {
+	right:66.666%
+}
+.nine_twelfths_pull-md {
+	right:75%
+}
+.ten_twelfths_pull-md {
+	right:83.3334%
+}
+.eleven_twelfths_pull-md {
+	right:91.666%
+}
+/*Push Starts here...*/
+.whole_push-md {
+	left:100%
+}
+.one_half_push-md {
+	left:50%
+}
+.one_third_push-md {
+	left:33.3333%
+}
+.two_thirds_push-md {
+	left:66.6667%
+}
+.one_fourth_push-md {
+	left:25%
+}
+.three_fourths_push-md {
+	left:75%
+}
+.one_fifth_push-md {
+	left:20%
+}
+.two_fifths_push-md {
+	left:40%
+}
+.three_fifths_push-md {
+	left:60%
+}
+.four_fifths_push-md {
+	left:80%
+}
+.one_sixth_push-md {
+	left:16.6667%
+}
+.two_sixths_push-md {
+	left:33.3333%
+}
+.three_sixths_push-md {
+	left:50%
+}
+.four_sixths_push-md {
+	left:66.6667%
+}
+.five_sixths_push-md {
+	left:83.3333%
+}
+.one_eighth_push-md {
+	left:12.5%
+}
+.two_eighths_push-md {
+	left:25%
+}
+.three_eighths_push-md {
+	left:37.5%
+}
+.four_eighths_push-md {
+	left:50%
+}
+.five_eighths_push-md {
+	left:62.5%
+}
+.six_eighths_push-md {
+	left:75%
+}
+.seven_eighths_push-md {
+	left:87.5%
+}
+.one_twelfth_push-md {
+	left:8.333%
+}
+.two_twelfths_push-md {
+	left:16.666%
+}
+.three_twelfths_push-md {
+	left:25%
+}
+.four_twelfths_push-md {
+	left:33.333%
+}
+.five_twelfths_push-md {
+	left:41.6667%
+}
+.six_twelfths_push-md {
+	left:50%
+}
+.seven_twelfths_push-md {
+	left:58.3334%
+}
+.eight_twelfths_push-md {
+	left:66.666%
+}
+.nine_twelfths_push-md {
+	left:75%
+}
+.ten_twelfths_push-md {
+	left:83.3334%
+}
+.eleven_twelfths_push-md {
+	left:91.666%
+}
+/*Offset Starts here...*/
+.whole_offset-md {
+	margin-left:100%
+}
+.one_half_offset-md {
+	margin-left:50%
+}
+.one_third_offset-md {
+	margin-left:33.3333%
+}
+.two_thirds_offset-md {
+	margin-left:66.6667%
+}
+.one_fourth_offset-md {
+	margin-left:25%
+}
+.three_fourths_offset-md {
+	margin-left:75%
+}
+.one_fifth_offset-md {
+	margin-left:20%
+}
+.two_fifths_offset-md {
+	margin-left:40%
+}
+.three_fifths_offset-md {
+	margin-left:60%
+}
+.four_fifths_offset-md {
+	margin-left:80%
+}
+.one_sixth_offset-md {
+	margin-left:16.6667%
+}
+.two_sixths_offset-md {
+	margin-left:33.3333%
+}
+.three_sixths_offset-md {
+	margin-left:50%
+}
+.four_sixths_offset-md {
+	margin-left:66.6667%
+}
+.five_sixths_offset-md {
+	margin-left:83.3333%
+}
+.one_eighth_offset-md {
+	margin-left:12.5%
+}
+.two_eighths_offset-md {
+	margin-left:25%
+}
+.three_eighths_offset-md {
+	margin-left:37.5%
+}
+.four_eighths_offset-md {
+	margin-left:50%
+}
+.five_eighths_offset-md {
+	margin-left:62.5%
+}
+.six_eighths_offset-md {
+	margin-left:75%
+}
+.seven_eighths_offset-md {
+	margin-left:87.5%
+}
+.one_twelfth_offset-md {
+	margin-left:8.333%
+}
+.two_twelfths_offset-md {
+	margin-left:16.666%
+}
+.three_twelfths_offset-md {
+	margin-left:25%
+}
+.four_twelfths_offset-md {
+	margin-left:33.333%
+}
+.five_twelfths_offset-md {
+	margin-left:41.6667%
+}
+.six_twelfths_offset-md {
+	margin-left:50%
+}
+.seven_twelfths_offset-md {
+	margin-left:58.3334%
+}
+.eight_twelfths_offset-md {
+	margin-left:66.666%
+}
+.nine_twelfths_offset-md {
+	margin-left:75%
+}
+.ten_twelftsh_offset-md {
+	margin-left:83.3334%
+}
+.eleven_twelfths_offset-md {
+	margin-left:91.666%
+}
+}
+/*Responsiveness large screen starts here...*/
+@media (min-width: 960px) {
+/*Columns Starts here...*/
+.whole-lg, .one_half-lg, .one_third-lg, .two_thirds-lg, .one_fourth-lg, .three_fourths-lg, .one_fifth-lg, .two_fifths-lg, .three_fifths-lg, .four_fifths-lg, .one_sixth-lg, .two_sixths-lg, .three_sixths-lg, .four_sixths-lg, .five_sixths-lg, .one_eighth-lg, .two_eighths-lg, .three_eighths-lg, .four_eighths-lg, .five_eighths-lg, .six_eighths-lg, .seven_eighths-lg, .one_twelfth-lg, .two_twelfths-lg, .three_twelfths-lg, .four_twelfths-lg, .five_twelfths-lg, .six_twelfths-lg, .seven_twelfths-lg, .eight_twelfths-lg, .nine_twelfths-lg, .ten_twelfths-lg, .eleven_twelfths-lg {
+	float:left
+}
+.whole-lg {
+	width:100%
+}
+.one_half-lg {
+	width:50%
+}
+.one_third-lg {
+	width:33.3333%
+}
+.two_thirds-lg {
+	width:66.6667%
+}
+.one_fourth-lg {
+	width:25%
+}
+.three_fourths-lg {
+	width:75%
+}
+.one_fifth-lg {
+	width:20%
+}
+.two_fifths-lg {
+	width:40%
+}
+.three_fifths-lg {
+	width:60%
+}
+.four_fifths-lg {
+	width:80%
+}
+.one_sixth-lg {
+	width:16.6667%
+}
+.two_sixths-lg {
+	width:33.3333%
+}
+.three_sixths-lg {
+	width:50%
+}
+.four_sixths-lg {
+	width:66.6667%
+}
+.five_sixths-lg {
+	width:83.3333%
+}
+.one_eighth-lg {
+	width:12.5%
+}
+.two_eighths-lg {
+	width:25%
+}
+.three_eighths-lg {
+	width:37.5%
+}
+.four_eighths-lg {
+	width:50%
+}
+.five_eighths-lg {
+	width:62.5%
+}
+.six_eighths-lg {
+	width:75%
+}
+.seven_eighths-lg {
+	width:87.5%
+}
+.one_twelfth-lg {
+	width:8.333%
+}
+.two_twelfths-lg {
+	width:16.666%
+}
+.three_twelfths-lg {
+	width:25%
+}
+.four_twelfths-lg {
+	width:33.333%
+}
+.five_twelfths-lg {
+	width:41.6667%
+}
+.six_twelfths-lg {
+	width:50%
+}
+.seven_twelfths-lg {
+	width:58.3334%
+}
+.eight_twelfths-lg {
+	width:66.666%
+}
+.nine_twelfths-lg {
+	width:75%
+}
+.ten_twelfths-lg {
+	width:83.3334%
+}
+.eleven_twelfths-lg {
+	width:91.666%
+}
+/*Pull Starts here...*/
+.whole_pull-lg {
+	right:100%
+}
+.one_half_pull-lg {
+	right:50%
+}
+.one_third_pull-lg {
+	right:33.3333%
+}
+.two_thirds_pull-lg {
+	right:66.6667%
+}
+.one_fourth_pull-lg {
+	right:25%
+}
+.three_fourths_pull-lg {
+	right:75%
+}
+.one_fifth_pull-lg {
+	right:20%
+}
+.two_fifths_pull-lg {
+	right:40%
+}
+.three_fifths_pull-lg {
+	right:60%
+}
+.four_fifths_pull-lg {
+	right:80%
+}
+.one_sixth_pull-lg {
+	right:16.6667%
+}
+.two_sixths_pull-lg {
+	right:33.3333%
+}
+.three_sixths_pull-lg {
+	right:50%
+}
+.four_sixths_pull-lg {
+	right:66.6667%
+}
+.five_sixths_pull-lg {
+	right:83.3333%
+}
+.one_eighth-lg {
+	width:12.5%
+}
+.two_eighths-lg {
+	width:25%
+}
+.three_eighths-lg {
+	width:37.5%
+}
+.four_eighths-lg {
+	width:50%
+}
+.five_eighths-lg {
+	width:62.5%
+}
+.six_eighths-lg {
+	width:75%
+}
+.seven_eighths-lg {
+	width:87.5%
+}
+.one_twelfth-lg {
+	width:8.333%
+}
+.two_twelfths-lg {
+	width:16.666%
+}
+.three_twelfths-lg {
+	width:25%
+}
+.four_twelfths-lg {
+	width:33.333%
+}
+.five_twelfths-lg {
+	width:41.6667%
+}
+.six_twelfths-lg {
+	width:50%
+}
+.seven_twelfths-lg {
+	width:58.3334%
+}
+.eight_twelfths-lg {
+	width:66.666%
+}
+.nine_twelfths-lg {
+	width:75%
+}
+.ten_twelfths-lg {
+	width:83.3334%
+}
+.eleven_twelfths-lg {
+	width:91.666%
+}
+/*Push Starts here...*/
+.whole_push-lg {
+	left:100%
+}
+.one_half_push-lg {
+	left:50%
+}
+.one_third_push-lg {
+	left:33.3333%
+}
+.two_thirds_push-lg {
+	left:66.6667%
+}
+.one_fourth_push-lg {
+	left:25%
+}
+.three_fourths_push-lg {
+	left:75%
+}
+.one_fifth_push-lg {
+	left:20%
+}
+.two_fifths_push-lg {
+	left:40%
+}
+.three_fifths_push-lg {
+	left:60%
+}
+.four_fifths_push-lg {
+	left:80%
+}
+.one_sixth_push-lg {
+	left:16.6667%
+}
+.two_sixths_push-lg {
+	left:33.3333%
+}
+.three_sixths_push-lg {
+	left:50%
+}
+.four_sixths_push-lg {
+	left:66.6667%
+}
+.five_sixths_push-lg {
+	left:83.3333%
+}
+.one_eighth-lg {
+	left:12.5%
+}
+.two_eighths-lg {
+	left:25%
+}
+.three_eighths-lg {
+	left:37.5%
+}
+.four_eighths-lg {
+	left:50%
+}
+.five_eighths-lg {
+	left:62.5%
+}
+.six_eighths-lg {
+	left:75%
+}
+.seven_eighths-lg {
+	left:87.5%
+}
+.one_twelfth-lg {
+	left:8.333%
+}
+.two_twelfths-lg {
+	left:16.666%
+}
+.three_twelfths-lg {
+	left:25%
+}
+.four_twelfths-lg {
+	left:33.333%
+}
+.five_twelfths-lg {
+	left:41.6667%
+}
+.six_twelfths-lg {
+	left:50%
+}
+.seven_twelfths-lg {
+	left:58.3334%
+}
+.eight_twelfths-lg {
+	left:66.666%
+}
+.nine_twelfths-lg {
+	left:75%
+}
+.ten_twelfths-lg {
+	left:83.3334%
+}
+.eleven_twelfths-lg {
+	left:91.666%
+}
+/*Offset Starts here...*/
+.whole_offset-lg {
+	margin-left:100%
+}
+.one_half_offset-lg {
+	margin-left:50%
+}
+.one_third_offset-lg {
+	margin-left:33.3333%
+}
+.two_thirds_offset-lg {
+	margin-left:66.6667%
+}
+.one_fourth_offset-lg {
+	margin-left:25%
+}
+.three_fourths_offset-lg {
+	margin-left:75%
+}
+.one_fifth_offset-lg {
+	margin-left:20%
+}
+.two_fifths_offset-lg {
+	margin-left:40%
+}
+.three_fifths_offset-lg {
+	margin-left:60%
+}
+.four_fifths_offset-lg {
+	margin-left:80%
+}
+.one_sixth_offset-lg {
+	margin-left:16.6667%
+}
+.two_sixths_offset-lg {
+	margin-left:33.3333%
+}
+.three_sixths_offset-lg {
+	margin-left:50%
+}
+.four_sixths_offset-lg {
+	margin-left:66.6667%
+}
+.five_sixths_offset-lg {
+	margin-left:83.3333%
+}
+.one_eighth_offset-lg {
+	margin-left:12.5%
+}
+.two_eighths_offset-lg {
+	margin-left:25%
+}
+.three_eighths_offset-lg {
+	margin-left:37.5%
+}
+.four_eighths_offset-lg {
+	margin-left:50%
+}
+.five_eighths_offset-lg {
+	margin-left:62.5%
+}
+.six_eighths_offset-lg {
+	margin-left:75%
+}
+.seven_eighths_offset-lg {
+	margin-left:87.5%
+}
+.one_twelfth_offset-lg {
+	margin-left:8.333%
+}
+.two_twelfths_offset-lg {
+	margin-left:16.666%
+}
+.three_twelfths_offset-lg {
+	margin-left:25%
+}
+.four_twelfths_offset-lg {
+	margin-left:33.333%
+}
+.five_twelfths_offset-lg {
+	margin-left:41.6667%
+}
+.six_twelfths_offset-lg {
+	margin-left:50%
+}
+.seven_twelfths_offset-lg {
+	margin-left:58.3334%
+}
+.eight_twelfths_offset-lg {
+	margin-left:66.666%
+}
+.nine_twelfths_offset-lg {
+	margin-left:75%
+}
+.ten_twelfths_offset-lg {
+	margin-left:83.3334%
+}
+.eleven_twelfths_offset-lg {
+	margin-left:91.666%
+}
+}
+@media (min-width:768px) {
+.content_column {
+	padding-left:10px;
+	padding-right:10px;
+}
+.content_row {
+	margin-left:-10px;
+	margin-right:-10px;
+}
+.whole, .whole-md, .whole-lg, .one_half, .one_half-md, .one_half-lg, .one_third, .one_third-md, .one_third-lg, .two_thirds, .two_thirds-md, .two_thirds-lg, .one_fourth, .one_fourth-md, .one_fourth-lg, .three_fourths, .three_fourths-md, .three_fourths-lg, .one_fifth, .one_fifth-md, .one_fifth-lg, .two_fifths, .two_fifths-md, .two_fifths-lg, .three_fifths, .three_fifths-md, .three_fifths-lg, .four_fifths, .four_fifths-md, .four_fifths-lg, .one_sixth, .one_sixth-md, .one_sixth-lg, .two_sixths, .two_sixths-md, .two_sixths-lg, .three_sixths, .three_sixths-md, .three_sixths-lg, .four_sixths, .four_sixths-md, .four_sixths-lg, .five_sixths, .five_sixths-md, .five_sixths-lg, .one_eighth, .one_eighth-md, .one_eighth-lg, .two_eighths, .two_eighths-md, .two_eighths-lg, .three_eighths, .three_eighths-md, .three_eighths-lg, .four_eighths, .four_eighths-md, .four_eighths-lg, .five_eighths, .five_eighths-md, .five_eighths-lg, .six_eighths, .six_eighths-md, .six_eighths-lg, .seven_eighths, .seven_eighths-md, .seven_eighths-lg, .one_twelfth, .one_twelfth-md, .one_twelfth-lg, .two_twelfths, .two_twelfths-md, .two_twelfths-lg, .three_twelfths, .three_twelfths-md, .three_twelfths-lg, .four_twelfths, .four_twelfths-md, .four_twelfths-lg, .five_twelfths, .five_twelfths-md, .five_twelfths-lg, .six_twelfths, .six_twelfths-md, .six_twelfths-lg, .seven_twelfths, .seven_twelfths-md, .seven_twelfths-lg, .eight_twelfths, .eight_twelfths-md, .eight_twelfths-lg, .nine_twelfths, .nine_twelfths-md, .nine_twelfths-lg, .ten_twelfths, .ten_twelfths-md, .ten_twelfths-lg, .eleven_twelfths, .eleven_twelfths-md, .eleven_twelfths-lg {
+	padding-left:10px;
+	padding-right:10px;
+}
+}
+@media (min-width:960px) {
+.content_column {
+	padding-left:15px;
+	padding-right:15px;
+}
+.content_row {
+	margin-left:-15px;
+	margin-right:-15px;
+}
+.whole, .whole-md, .whole-lg, .one_half, .one_half-md, .one_half-lg, .one_third, .one_third-md, .one_third-lg, .two_thirds, .two_thirds-md, .two_thirds-lg, .one_fourth, .one_fourth-md, .one_fourth-lg, .three_fourths, .three_fourths-md, .three_fourths-lg, .one_fifth, .one_fifth-md, .one_fifth-lg, .two_fifths, .two_fifths-md, .two_fifths-lg, .three_fifths, .three_fifths-md, .three_fifths-lg, .four_fifths, .four_fifths-md, .four_fifths-lg, .one_sixth, .one_sixth-md, .one_sixth-lg, .two_sixths, .two_sixths-md, .two_sixths-lg, .three_sixths, .three_sixths-md, .three_sixths-lg, .four_sixths, .four_sixths-md, .four_sixths-lg, .five_sixths, .five_sixths-md, .five_sixths-lg, .one_eighth, .one_eighth-md, .one_eighth-lg, .two_eighths, .two_eighths-md, .two_eighths-lg, .three_eighths, .three_eighths-md, .three_eighths-lg, .four_eighths, .four_eighths-md, .four_eighths-lg, .five_eighths, .five_eighths-md, .five_eighths-lg, .six_eighths, .six_eighths-md, .six_eighths-lg, .seven_eighths, .seven_eighths-md, .seven_eighths-lg, .one_twelfth, .one_twelfth-md, .one_twelfth-lg, .two_twelfths, .two_twelfths-md, .two_twelfths-lg, .three_twelfths, .three_twelfths-md, .three_twelfths-lg, .four_twelfths, .four_twelfths-md, .four_twelfths-lg, .five_twelfths, .five_twelfths-md, .five_twelfths-lg, .six_twelfths, .six_twelfths-md, .six_twelfths-lg, .seven_twelfths, .seven_twelfths-md, .seven_twelfths-lg, .eight_twelfths, .eight_twelfths-md, .eight_twelfths-lg, .nine_twelfths, .nine_twelfths-md, .nine_twelfths-lg, .ten_twelfths, .ten_twelfths-md, .ten_twelfths-lg, .eleven_twelfths, .eleven_twelfths-md, .eleven_twelfths-lg {
+	padding-left:15px;
+	padding-right:15px;	
+}
+}
+
+ @media (min-width:1040px) {
+.content_column {
+	padding-left:20px;
+	padding-right:20px;
+}
+.content_row {
+	margin-left:-20px;
+	margin-right:-20px;
+}
+.whole, .whole-md, .whole-lg, .one_half, .one_half-md, .one_half-lg, .one_third, .one_third-md, .one_third-lg, .two_thirds, .two_thirds-md, .two_thirds-lg, .one_fourth, .one_fourth-md, .one_fourth-lg, .three_fourths, .three_fourths-md, .three_fourths-lg, .one_fifth, .one_fifth-md, .one_fifth-lg, .two_fifths, .two_fifths-md, .two_fifths-lg, .three_fifths, .three_fifths-md, .three_fifths-lg, .four_fifths, .four_fifths-md, .four_fifths-lg, .one_sixth, .one_sixth-md, .one_sixth-lg, .two_sixths, .two_sixths-md, .two_sixths-lg, .three_sixths, .three_sixths-md, .three_sixths-lg, .four_sixths, .four_sixths-md, .four_sixths-lg, .five_sixths, .five_sixths-md, .five_sixths-lg, .one_eighth, .one_eighth-md, .one_eighth-lg, .two_eighths, .two_eighths-md, .two_eighths-lg, .three_eighths, .three_eighths-md, .three_eighths-lg, .four_eighths, .four_eighths-md, .four_eighths-lg, .five_eighths, .five_eighths-md, .five_eighths-lg, .six_eighths, .six_eighths-md, .six_eighths-lg, .seven_eighths, .seven_eighths-md, .seven_eighths-lg, .one_twelfth, .one_twelfth-md, .one_twelfth-lg, .two_twelfths, .two_twelfths-md, .two_twelfths-lg, .three_twelfths, .three_twelfths-md, .three_twelfths-lg, .four_twelfths, .four_twelfths-md, .four_twelfths-lg, .five_twelfths, .five_twelfths-md, .five_twelfths-lg, .six_twelfths, .six_twelfths-md, .six_twelfths-lg, .seven_twelfths, .seven_twelfths-md, .seven_twelfths-lg, .eight_twelfths, .eight_twelfths-md, .eight_twelfths-lg, .nine_twelfths, .nine_twelfths-md, .nine_twelfths-lg, .ten_twelfths, .ten_twelfths-md, .ten_twelfths-lg, .eleven_twelfths, .eleven_twelfths-md, .eleven_twelfths-lg {
+	padding-left:20px;
+	padding-right:20px;
+}
+}

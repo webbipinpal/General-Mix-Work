@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script src="js/jquery-1.9.1.min.js"> </script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+body{ padding:0; margin:0;}
+.wrapper{ margin:50px auto; width:960px;}
+.switch{ margin:5px; width:50px; height:24px; display:inline-block; position:relative;}
+.slider{ position:absolute; left:0; right:0; top:0; bottom:0; background-color:#ccc; border-radius:3px; transition: all 2s; -webkit-transition: all 2s;}
+.slider:before{ position:absolute; width:18px; height:18px; content:''; left:4px; top:3px; background-color:#fff; transition: all 2s; -webkit-transition: all 2s;}
+.checkbox{ padding:4px;}
+input:checked + .slider{ background-color:blue; transition: all 2s; -webkit-transition: all 2s;}
+input:checked + .slider:before{ left:28px; transition: all 2s; -webkit-transition: all 2s;}
+
+/*
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}*/
+.slider.round{ border-radius:20px;}
+.slider.round:before{border-radius:50%;}
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+<h2>Toggle Switch</h2>
+
+<label class="switch">
+  <input type="checkbox">
+  <div class="slider"></div>
+</label>
+
+<label class="switch">
+  <input type="checkbox" checked>
+  <div class="slider"></div>
+</label><br><br>
+
+<label class="switch">
+  <input type="checkbox">
+  <div class="slider round"></div>
+</label>
+
+<label class="switch">
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label>
+
+</div>
+<script type="text/javascript">
+
+
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,223 @@
+@font-face {
+}
+body {font-family:Arial; color:#404040;}
+/**{
+	-webkit-transition: width 1s;
+	-moz-transition: width 1s;
+	-o-transition: width 1s;
+	-ms-transition: width 1s;
+    transition: width 1s;
+	}*/
+h1, h2, h3, h4, h5, h6{ padding:0px; margin:0px; color:#404040;}
+/*.container-fluid{ padding-left:0px; padding-right:0px;}*/
+.bg_tile_img {background:url(../images/login_bg.png) no-repeat;background-size:cover;height:100%;width:100%;margin:0 auto;background-size:cover;}
+hr{border-color: #d1d1d1 -moz-use-text-color -moz-use-text-color;padding:0px;margin:0px;}
+input{ margin-bottom:5px;}
+
+.login_padder{padding:34.375% 0;}
+.pair-group input[type="text"], .pair-group input[type="email"]{ border-bottom:1px solid #d1d1d1;}
+.header_bor h1{padding:0px; margin:0px; font-size:30px; font-weight:300; width:100%;}
+
+.progress{background-color:#1a4793;border-radius:0;margin-bottom:0px;border-bottom:1px solid #99a7ae;border-top:1px solid #99a7ae;}
+
+header {color:#a3a3a3;padding:5% 0;text-align:center;}
+.header_bor {border-bottom:1px solid #a8a8a8;margin-bottom:2.8125%;}
+button.navbar-toggle{ margin:0px; padding:0px; border-radius:0px;}
+.navbar-toggle .icon-bar{ background-color:#003e7e; border-radius:4px; height:5px; width:40px;}
+nav.navbar{ margin-bottom:0px; height:auto; min-height:inherit; border:none;}
+div.navbar-collapse{ border:none; box-shadow:none;}
+.header_bor h2{font-weight:300;font-family:Arial;}
+.navbar-toggle{ display:block !important;}
+
+.padding{ padding:0px; margin:0px;}
+.content_padder{ padding:0px 8.4375%}
+.content_smaller_padder{ margin:0px 4.6875%}/*15px 15px*/
+.m_padding{ padding-left:3.125%; padding-right:3.125%;}/*15px 15px*/
+.lg_padding{padding-left:6.25%; padding-right:6.25%;}/*20px 20px*/
+.xlg_padding_tb{padding-top:4.6875%; padding-bottom:4.6875%;}/*15px 15px 320*/
+.xlg_padding_lr{padding-left:6.25%; padding-right:6.25%;}/*20px 20px 320*/
+.xlg_margin{ margin-top:9.375%; margin-bottom:9.375%;}/*30px 30px 640*/
+.xlg_margin_tb40{ margin-top: 10.9375%; margin-bottom: 10.9375%;}/*35px 35px*/
+.sm_margin{ margin-left:2.5%; margin-right:2.5%;}/*10px 10px*/
+.sm_margin_tb{ margin-top:2.5%; margin-bottom:2.5%;}/*10px 10px*/
+.sm_padding{ padding-left:2.5%; padding-right:2.5%;}/*10px 10px*/
+
+.font_size30{ font-size:30px;}
+.font_size20{ font-size:20px;}
+
+.back_btn, .submit_btn{ color:#003e7e; font-size:30px; line-height:1em;}
+.section_layout{ background-color:#fff; box-shadow:1px 1px 1px #ccc;padding:4% 5%;margin:0px;}
+.boxshadow-smaller{
+	-webkit-box-shadow:-1px 2px 2px 0 rgba(0, 0, 0, 0.2), 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+	-moz-box-shadow:   -1px 2px 2px 0 rgba(0, 0, 0, 0.2), 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+	box-shadow:         -1px 2px 2px 0 rgba(0, 0, 0, 0.2), 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+	border-bottom:1px solid #ccc;
+	background-color:#fff;
+	}
+.list_ulli{ padding:0px; margin:0px;}
+.list_ulli li{ list-style:none; padding:0px; margin:0px; width:100%; clear:both; color:#404040; font-size:20px; overflow:hidden;}
+.list_ulli li span.left{ text-align:left; float:left;}
+.list_ulli li span.right{ text-align:right; float:right;}
+.bold{ font-weight:bold;}
+.center{ text-align:center; margin:0 auto;}
+.cancel{ padding:0px; margin:0px; font-size:28px;}
+.submit{ padding:0px; margin:0px; font-size:28px;}
+.bg_arrow_icon {
+	background: #fff url(../images/next_icon_new.png) no-repeat 100% 50%;
+	cursor:pointer;
+}
+
+/*gradient border top css start here*/
+.gradient_border_top{
+	position: relative;
+	height:2px;
+	background-image: -webkit-gradient(radial, top, 10, 90% 0%, 150, from(#c8c8c8), to(#fff));
+	background-image: -webkit-radial-gradient( top, 150px 230px, #c8c8c8, #fff );
+	background-image: -moz-radial-gradient(top, farthest-corner, #c8c8c8 0%, #fff 60%);
+	border:none;
+	margin: 2% 0;
+}
+.gradient_border_margin{margin:4.375% 0;}
+/*gradient border top css close here*/
+/*LEFT SLIDE NAV navigation css start here */
+
+.nav-header .nav-expander{ display: block;}
+.nav-expander { border-color: #ddd; position: absolute;left: 0; z-index: 12; 
+    transition: left 0.3s ease-in-out 0s; 
+    -webkit-transition: left 0.3s ease-in-out 0s; 
+    -moz-transition: left 0.3s ease-in-out 0s; 
+    -o-transition: left 0.3s ease-in-out 0s; }
+.nav-expander .icon-bar{ background-color: #888;}
+.nav-expanded .nav-expander{ left: 20em;}
+nav { background: #2d2f33; display: block; height: 100%; overflow: auto; position: fixed; left: -20em; top: 0; width: 20em; z-index: 2000; 
+    transition: left 0.3s ease-in-out 0s; 
+    -webkit-transition: left 0.3s ease-in-out 0s; 
+    -moz-transition: left 0.3s ease-in-out 0s; 
+    -o-transition: left 0.3s ease-in-out 0s; }
+.nav-expanded nav {left: 0;}
+body.nav-expanded {margin-left: 0em;
+    transition: left 0.4s ease-in-out 0s;
+    -webkit-transition: left 0.4s ease-in-out 0s;
+    -moz-transition: left 0.4s ease-in-out 0s;
+    -o-transition: left 0.4s ease-in-out 0s;}
+#nav-close {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; font-weight: 300;font-size: 24px; padding-right: 10px; }
+.main-menu { padding-top: 12px;}
+.main-menu li { border-bottom: 1px solid #323949; margin-left: 20px; font-size: 18px;padding: 12px;}
+.main-menu li a { color: #6F7D8C; text-decoration: none; }
+.main-menu li a:hover { color: #FFFFFF; text-decoration: none; }
+/*navigation css close here*/
+
+
+/*login_page css start here*/
+.login_box input{ margin-bottom:0px;}
+#page header {border-radius:0px;background:none;}
+.logo img {margin:0 auto;}
+.form-signin {padding-top:7.1875%;}
+.login_box input[type="email"]{ border-radius:8px 8px 0 0; border:1px solid #d0d0d0;}
+.login_box input[type="password"]{ border-radius:0px 0px 8px 8px; border:1px solid #d0d0d0; border-top:none;}
+.input-block-level{font-weight: 300;border: none;box-shadow:none;width:100%;padding:4% 3.5%;color:#4d4d4d;}
+.btn-lg_custom {font-weight:300;padding:4% 0;border:1px solid #d0d0d0; margin-top:3.125%;}
+.btn-lg_custom, .input-block-level, .for_password-link, .sign_up label {font-size:30px}
+.for_password-link {display: block;text-align: center;width: 100%;padding-top:1.25%;}
+.sign_up {padding-top:7.8125%;}
+.sign_up label{font-weight:300;padding:0;padding-bottom:1.25%;margin:0px;}
+
+/*login_page css close here*/
+
+/*landing_page css start here*/
+/* #landing .container-fluid{padding-left:0px; padding-right:0px;} */
+
+/* .landing_contenter_icon{float:left;width:100%;} */
+.exchange_rate .today_limit{font-weight:bold;font-size:24px;padding:0px;margin:0px;}
+.exchange_rate .today_rate{display: block;padding:1.25% 0 0;margin:0px; font-size:30px;}
+.exchange_rate .today_rate span{font-weight:bold;padding:0 6.5%;	display:inline-block;margin:0px;}
+.exchange_rate .today_rate span:first-child{ text-align:right;}
+.exchange_rate .today_rate span:last-child{ text-align:left;}
+.landing_contenter_icon ul{float:left;width:100%;	padding:0px;margin:0px;}
+.landing_contenter_icon ul li{float:left;width:49.4%;padding:0px;margin:0px;list-style:none;background-color: rgba(255, 255, 255, 0.1);background: rgba(255, 255, 255, 0.1);}
+.landing_contenter_icon ul li:nth-child(odd){
+	margin-right:.5%;
+	margin-bottom:0.8%;
+	float:left;
+	-webkit-box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:    2px 2px 3px 0 rgba(0, 0, 0, 0.5);
+	box-shadow:         2px 2px 3px 0 rgba(0, 0, 0, 0.5);
+}
+.landing_contenter_icon ul li:nth-child(even) {margin-left:.5%;margin-bottom:0.8%;float:right;
+	-webkit-box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:    -2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+	box-shadow:         -2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+}
+.landing_contenter_icon ul li a{float:left;	width:100%;	padding:16% 5% 5%;text-align:center;color:#fff;font-size:24px;}
+.landing_contenter_icon ul li a img{margin:0 auto;width:35%;}
+.landing_contenter_icon ul li a:hover{text-decoration:none;}
+.landing_contenter_icon ul li a span{display:block;width:100%;font-weight:bold;}
+.exchange_rate{
+	text-align:center;
+	background-color: rgba(255, 255, 255, 0.1);
+	background: rgba(255, 255, 255, 0.1);
+	padding-top: 5.625%;
+	padding-bottom: 6%;
+	-webkit-box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:    0px 2px 1px 0 rgba(0, 0, 0, 0.5);
+	box-shadow:         0px 2px 1px 0 rgba(0, 0, 0, 0.5);
+}
+/*landing_page css close here*/
+
+/*transaction history css start here*/
+.see_all {
+	background: #fff url(../images/next_icon_new.png) no-repeat 92.1875% 50%;
+	color:#404040;
+	font-weight:normal;
+	padding:3.75% 8.4375%;
+	border-bottom:1px solid #e7e7e7;
+	border-top:1px solid #e7e7e7;
+	-webkit-box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:    2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+	box-shadow:         2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+	cursor:pointer;
+}
+#Tra_history .see_all{ margin-bottom:3.125%;}
+.all_users_pro_block {background: #fff url(../images/next_icon_new.png) no-repeat 94.6875% 50%;padding:4.375%;border:1px solid #d8d8d8;border-radius:10px;margin-bottom:12px;cursor:pointer;color:#404040;}
+.all_users_pro_block h2{color:#404040;padding:0 0 4.0625%;}
+.all_users_pro_block span{display:block;font-family:Arial;}
+.all_users_pro_block h2 span.user_name{display:inline-block;}
+.all_users_pro_block h2 span.user_profile_info{float:right;}
+.all_users_pro_block .users_short_profile{font-weight:200;font-size:20px;line-height:24px;}
+/*transaction history css close here*/
+
+/*transaction history details css start here*/
+.tr_sm_info li{ font-size:24px; line-height:1.7em;}
+.transaction_detail h3{ margin:0 0 2.8125%; line-height:16px; display:inline-block; width:100%;}
+.middem-font{ font-size:24px;}
+.transaction_detail .lg_padding{ display:inline-block; width:100%;}
+
+/*transaction history details css close here*/
+
+/*sanding mathods css start here*/
+#sanding_mathods .content_container .see_all{ padding:6.25% 8.4375%;}
+/*sanding mathods css close here*/
+
+/*Beneficiaries css start here*/
+.ben_drop_down_btn, .ben_drop_down_btn + ul.dropdown-menu{width:130px;float:right;}
+.ben_drop_down_btn + ul.dropdown-menu{/* margin-left:15px;*/}
+.form-horizontal .control-label{ text-align:left;}
+#beneficiaries .user_name_block{padding-top:4.6875%; padding-bottom:4.6875%;}
+/*Beneficiaries css start here*/
+
+/*Replace Transaction details css start here*/
+#Tra_replacement header h2{left: 0;position: absolute;right: 0;}
+#Tra_replacement label{color:#4d4d4d;}
+.acc_no_con{ padding-top:4.6875%;}
+/*Replace Transaction details css close here*/
+
+/*user agreement css start here
+#users_agreement .header_bor{ margin-bottom:0px;}
+#users_agreement header{ background-color:#073f75; color:#fff;}
+#users_agreement .navbar-toggle .icon-bar{ background-color:#fff;}
+#users_agreement{color:#2b2b2b;}
+#users_agreement aside h3{  font-size:30px; padding:4.6875% 0; margin:0px;font-family:Arial;}
+#users_agreement aside h4{ font-size:24px;}
+#users_agreement aside p{ font-weight:200; font-size:30px; padding:1.6% 0px; line-height:1.5em; font-family:Arial;}*/
+#users_agreement aside h3{/*  font-size:30px;*/ padding:4.6875% 0; margin:0px;font-family:Arial; color:#2b2b2b;}
+/*user agreement css close here*/

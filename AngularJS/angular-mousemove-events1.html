@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Select Box</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<style type="text/css">
+	.wrapper {
+		width: 960px;
+		margin: 30px auto;
+	}
+	input {
+		padding: 5px 8px;
+		border: 1px solid #ccc;
+	}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+	<div ng-app="myApp" ng-controller="MyCtrl">
+		<h3 ng-mousemove="myFun($event)">Mouse Enter Count</h3>
+		<h1>Count No = {{x + ',' + y}}</h1>
+	</div>
+</div>
+
+<script>
+	var app = angular.module('myApp', []);
+	app.controller('MyCtrl', function($scope){
+		$scope.myFun = function(myE){
+		$scope.x = myE.clientX;
+		$scope.y = myE.clientY;
+		
+		}
+		
+		
+	});
+	
+	
+</script>
+	
+</body>
+</html>

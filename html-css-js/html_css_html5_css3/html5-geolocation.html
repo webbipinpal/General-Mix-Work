@@ -1,0 +1,33 @@
+<doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>HTML 5 Geolocation </title>
+</head>
+
+<body>
+<p>I am going to use HTML5 Geolocation </p>
+<button onclick="getlocation()">Get Location</button>
+<p id="demo"></p>
+
+<script>
+
+var a = document.getElementById('demo');
+
+function getlocation(){
+	if(navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(showPosition);
+	}else{
+	a.innerHTML = 'Geolocation is not get current location';
+	}
+}
+
+function showPosition(position){
+	a.innerHTML= 'Latitude:' + position.coords.latitude + '<br /> Longtitude :' + position.coords.longitude;
+};
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Select Box</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<style type="text/css">
+	.wrapper {
+		width: 960px;
+		margin: 30px auto;
+	}
+	input {
+		padding: 5px 8px;
+		border: 1px solid #ccc;
+	}
+</style>
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div ng-app="myApp" ng-controller="myCtrl">
+			<select ng-model="selectItem" ng-options="x for (x, y) in cars">
+			</select>
+			<h1>Selected Car Name: {{selectItem.brand}}</h1>
+			<h2>Selected Car Color: {{selectItem.color}}</h2>
+			<h3>Selected Car Model: {{selectItem.model}}</h3>
+		</div>
+	</div>
+	
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('myCtrl', function($scope){
+			$scope.cars = {
+			car01:{brand:'Maruti', color:'Red', model:'X217'},
+			car02:{brand:'BMW', color:'Gray', model:'S816'},
+			car03:{brand:'Audi', color:'White', model:'xp517'},
+			car04:{brand:'Nano', color:'blue', model:'n517'}
+			};
+		});
+	</script>
+	
+</body>
+</html>

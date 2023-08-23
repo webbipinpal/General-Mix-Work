@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Test javascript</title>
+<script src="js/jquery-1.9.1.min.js"> </script>
+<style type="text/css">
+body {
+	background-color: #8d8d8d;
+	color: #fff;
+	padding: 0px;
+	margin: 0px;
+}
+.container {
+	max-width: 1460px;
+	padding: 0 40px;
+}
+.top {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99999;
+}
+
+.nav>.container {
+	animation-name: header;
+	animation-timing-function: cubic-bezier(.5, 0, 0, 1);
+	opacity: 1;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-delay: 2.5s;
+}
+.nav {
+	background: #3f3f3f;
+ font-size: 12px  -webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+.nav>.container {
+	position: relative;
+	animation-duration: 2s
+}
+.toggle-work {
+	width: 70px;
+	right: 50%;
+	margin-right: -35px;
+}
+#profile-link, .toggle-work {
+	color: #fff;
+	cursor: pointer;
+	transition: color .2s;
+	position: absolute;
+}
+#profile-link, .toggle-work, a.logo {
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1px;
+	padding: 15px 0;
+	display: inline-block;
+	color: #fff;
+}
+#profile-link {
+	right: 40px;
+}
+.fixed-bottom {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+.work {
+    overflow: hidden;
+    background: #8d8d8d;
+    margin: 0 auto;
+    padding: 0;
+    display: none;
+    height: calc(100vh - 50px);
+    width: 100%;
+}
+.work .work-title {
+    right: 0;
+    position: absolute;
+    z-index: 9999;
+    text-align: right;
+    opacity: 0;
+    top: -200px;
+    transition: top 1.4s, opacity .5s;
+    transition-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+.work-title.work-title-active {
+    opacity: 1;
+    top: 30px;
+}
+.work .work-title h2 {
+    display: inline;
+    background: #3f3f3f;
+    padding: 8px;
+    line-height: 50px;
+}
+
+
+.work .work-title-left {
+    left: -700px;
+    position: absolute;
+    z-index: 9999;
+    text-align: left;
+    opacity: 0;
+    top:30%;
+	bottom:0;
+    transition: left 1.8s, opacity .9s;
+    transition-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+.work-title-left.work-title-left-active {
+    opacity: 1;
+    left: 30px;
+}
+.work .work-title-left h2 {
+    display: inline;
+    background: #3f3f3f;
+    padding: 8px;
+    line-height: 50px;
+}
+
+
+
+</style>
+</head>
+
+<body>
+<section class="top">
+<section class="work">
+  <div class="work-title unselectable">
+    <h2>↓↓↓ A small selection of my recent client work</h2>
+    <br>
+    <h2>and personal projects</h2>
+  </div>
+  
+  
+  <div class="work-title-left unselectable">
+    <h2>↓↓↓ A small selection of my recent client work</h2>
+    <br>
+    <h2>and personal projects</h2>
+  </div>
+  
+  
+</section>
+<nav class="nav unselectable">
+  <div class="container"> <a class="logo"> Bipin</span> </a> <span class="toggle-work">Work</span> <span id="profile-link">Profile</span> </div>
+</nav>
+</section>
+<script type="text/javascript">
+
+$('document').ready(function() {
+
+	$('.toggle-work').click(function(){
+		if($('.toggle-work').text() == "Work"){
+			$('.toggle-work').text("Close");
+			$('.work').slideDown(500);
+			$('.work-title').addClass('work-title-active');
+			$('.work-title-left').addClass('work-title-left-active');		 
+		}else if($('.toggle-work').text() == "Close"){
+			$('.toggle-work').text("Work");
+			$('.work').slideUp(500);
+			$('.work-title').removeClass('work-title-active');
+			$('.work-title-left').removeClass('work-title-left-active');
+		}
+	
+	});
+
+
+});
+
+
+</script>
+</body>
+</html>

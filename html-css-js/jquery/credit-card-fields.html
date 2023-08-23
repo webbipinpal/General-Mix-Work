@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Credit Card no box</title>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+<style>
+    input{padding:10px; width:50px; letter-spacing: 5px; float: left; margin-right: 10px;}
+    input:focus{ border:1px solid red;}
+</style>
+</head>
+
+<body>
+<div id="creditBox">
+   <h3>Please Enter Credit Card Number</h3>
+    <input id="first" type="text" maxlength="4" />
+    <input id="second" type="text" maxlength="4" />
+    <input id="third" type="text" maxlength="4" />
+    <input id="fourth" type="text" maxlength="4" />
+</div>
+<script type="text/javascript">
+            
+    $(document).ready(function(){
+        $('#creditBox input').on('keypress', function(){
+            var a = $(this).val().length;
+            if(a >=4){
+                $(this).next('input').focus();  
+            }
+            
+        });
+        
+        $('#creditBox input').keydown(function(a) {
+            
+            if(a.which == 8 && $(this).val() == ''){
+                
+                $(this).prev('input').focus();
+                
+            }
+            
+        });
+        
+        
+        
+    });
+    
+</script>
+</body>
+</html>

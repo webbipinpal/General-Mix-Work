@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HTML5 Session Storage </title>
+</head>
+<body>
+<button onclick="sessionClick()">Session Storage</button>
+<div id="result"></div>
+<p>Click the button to see the counter increase</p>
+
+<script>
+
+function sessionClick(){
+	if(typeof(Storage) !== 'undefined'){
+		if(sessionStorage.clickcount){
+			sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+		}else{
+			sessionStorage.clickcount = 1;
+		}
+	
+		document.getElementById('result').innerHTML = 'You have click the button' + ' ' + sessionStorage.clickcount + ' ' + 'Times in this session';
+	}else{
+		document.getElementById('result').innerHTML = 'Your browser does not supported html5 storage';
+	}
+
+}
+
+
+</script>
+
+</body>
+</html>

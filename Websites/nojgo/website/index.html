@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nojgo </title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="favicon" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    
+    
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/datepicker.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nouislider.css" />
+
+</head>
+
+<body>
+    <div class="tm-main-content" id="top">
+        <div class="tm-top-bar-bg"></div>
+        <div class="tm-top-bar" id="tm-top-bar">
+            <!-- Top Navbar -->
+            <div class="container">
+                <div class="row">
+
+                    <nav class="navbar navbar-expand-lg narbar-light">
+                        <a class="navbar-brand mr-auto" href="#">
+                            <img src="img/n-logo.png" alt="Site logo">
+                            NOJGO
+                        </a>
+                        <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse"
+                            data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#top">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Rental</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="tm-section tm-bg-img" id="tm-section-1">
+            <div class="tm-bg-white ie-container-width-fix-2">
+                <div class="container ie-h-align-center-fix">
+                    <div class="row">
+                        <div class="col-xs-12 ml-auto mr-auto ie-container-width-fix">
+                            <form action="index.html" method="get" class="tm-search-form tm-section-pad-2">
+                                <div class="form-row tm-search-form-row">
+                                    <div class="form-group tm-form-element tm-form-element-100">
+                                        <i class="fa fa-map-marker fa-2x tm-form-element-icon"></i>
+                                        <input name="city" type="text" class="form-control" id="inputCity"
+                                            placeholder="Type your destination...">
+                                    </div>
+                                    <div class="form-group tm-form-element tm-form-element-50">
+                                        <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
+                                        <input name="check-in" type="text" class="form-control" id="inputCheckIn"
+                                            placeholder="Check In">
+                                    </div>
+                                    <div class="form-group tm-form-element tm-form-element-50">
+                                        <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
+                                        <input name="check-out" type="text" class="form-control" id="inputCheckOut"
+                                            placeholder="Check Out">
+                                    </div>
+                                </div>
+                                <div class="form-row tm-search-form-row">
+                                    <div class="form-group tm-form-element tm-form-element-2">
+                                        <select name="adult" class="form-control tm-select" id="adult">
+                                            <option value="">Adult</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                        <i class="fa fa-2x fa-user tm-form-element-icon"></i>
+                                    </div>
+                                    <div class="form-group tm-form-element tm-form-element-2">
+                                        <select name="children" class="form-control tm-select" id="children">
+                                            <option value="">Children</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                        <i class="fa fa-user tm-form-element-icon tm-form-element-icon-small"></i>
+                                    </div>
+                                    <div class="form-group tm-form-element tm-form-element-2">
+                                        <select name="room" class="form-control tm-select" id="room">
+                                            <option value="">Room</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                        <i class="fa fa-2x fa-bed tm-form-element-icon"></i>
+                                    </div>
+                                    <div class="form-group tm-form-element tm-form-element-2">
+                                        <button type="submit" class="btn btn-primary tm-btn-search">Check
+                                            Availability</button>
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix pl-2 pr-2 tm-fx-col-xs">
+                                    <p class="tm-margin-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                    <a href="#"
+                                        class="ie-10-ml-auto ml-auto mt-1 tm-font-semibold tm-color-primary">Need
+                                        Help?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- section HTML start here -->
+        <section class="m-space">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="leftSide">
+                            <!-- hotel price section HTML start here -->
+							<div class="hotel__price">
+								<h3 class="hotel__price--title">Hotel by price</h3>
+								<div id="html5"> </div>
+								<span id="start--price"><input type="number" id="input-select" min="0" max="1000" step="1" id="input-number"></span> <span class="price--to">To</span>
+								<span id="last--price"><input type="number" min="0" max="1000" step="1" id="input-number"></span>
+							</div>
+							<!-- hotel price section HTML end here -->
+                            <!-- hotel category section HTML start here -->
+							<div id="hotel-category" class="hotel-category">
+								<h3 class="hotel-category--title">Product Category</h3>
+								<ul class="hotel-category__list hotel__check">
+									<li class="hotel-category__list--item">
+										<input type="checkbox" id="Hotel" >
+										<label for="Hotel"> Hotel</label>
+									</li>
+                                    <li class="hotel-category__list--item">
+										<input type="checkbox" id="Hotel" >
+										<label for="Hotel"> Hotel</label>
+									</li>
+                                    <li class="hotel-category__list--item">
+										<input type="checkbox" id="Hotel" >
+										<label for="Hotel"> Hotelsaasd</label>
+									</li>
+                                    <li class="hotel-category__list--item">
+										<input type="checkbox" id="Hotel" >
+										<label for="Hotel"> Hotelsdsad</label>
+									</li>
+                                    <li class="hotel-category__list--item">
+										<input type="checkbox" id="Hotel" >
+										<label for="Hotel"> Hotelsdasds</label>
+									</li>
+									
+								</ul>
+							</div>
+                            <div id="hotel-category" class="hotel-category">
+								<h3 class="hotel-category--title">Product Category</h3>
+								<ul class="hotel-category__list hotel__check">
+									<li class="hotel-category__list--item">
+										<input type="checkbox" id="Hotel" >
+										<label for="Hotel"> Hotel</label>
+									</li>
+                                    <li class="hotel-category__list--item">
+										<input type="checkbox" id="Hotel" >
+										<label for="Hotel"> Hotel</label>
+									</li>
+                                    <li class="hotel-category__list--item">
+										<input type="checkbox" id="Hotel" >
+										<label for="Hotel"> Hotelsaasd</label>
+									</li>
+                                    <li class="hotel-category__list--item">
+										<input type="checkbox" id="Hotel" >
+										<label for="Hotel"> Hotelsdsad</label>
+									</li>
+                                    <li class="hotel-category__list--item">
+										<input type="checkbox" id="Hotel" >
+										<label for="Hotel"> Hotelsdasds</label>
+									</li>
+									
+								</ul>
+							</div>
+                            <div id="hotel-category" class="hotel-category">
+								<h3 class="hotel-category--title">Product Category</h3>
+								<ul class="hotel-category__list hotel__check">
+									<li class="hotel-category__list--item">
+										<input type="checkbox" id="Hotel" >
+										<label for="Hotel"> Hotel</label>
+									</li>
+                                    <li class="hotel-category__list--item">
+										<input type="checkbox" id="Hotel" >
+										<label for="Hotel"> Hotel</label>
+									</li>
+                                    <li class="hotel-category__list--item">
+										<input type="checkbox" id="Hotel" >
+										<label for="Hotel"> Hotelsaasd</label>
+									</li>
+                                    <li class="hotel-category__list--item">
+										<input type="checkbox" id="Hotel" >
+										<label for="Hotel"> Hotelsdsad</label>
+									</li>
+                                    <li class="hotel-category__list--item">
+										<input type="checkbox" id="Hotel" >
+										<label for="Hotel"> Hotelsdasds</label>
+									</li>
+									
+								</ul>
+							</div>
+							<!-- hotel category section HTML end here -->
+							
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="hotel__list">
+                            <ul>
+                                <li class="items">
+                                    <div class="hotel-block">
+                                        <figure>
+                                            <img src="img/h-img.png" alt="" title="" class="img-responsive full-width" />
+                                        </figure>
+                                        <div class="hotel-block__detail">
+                                            <div class="hotel-block__wrap">
+                                                <h2>Collection O 83072 Hotel Pal</h2>
+                                                <div class="tag-maker">
+                                                    <span>Lucknow, Lucknow</span><span> <i class="fa fa-map-marker"></i> 0.9 KM </span>
+                                                </div>
+                                                <div class="hotel-block-des">
+                                                    <p>
+                                                        Growing clinical evidence 
+                                                    </p>
+                                                </div>
+                                                <div class="hotelRating">
+                                                    <span class="hotelRating__rating--excellent">4.5 <i class="fa fa-star"></i></span>
+                                                    <span class="hotelRating__ratingSummary ">(157 Ratings)</span>
+                                                    <span class="hotelRating__ratingSummary">Excellent</span>
+                                                </div>
+                                            </div>
+                                            <div class="hotel-block__bottom">
+                                                <div class="Description__priceBtn">
+                                                    <div class="price-row">
+                                                        <div class="listingPrice">
+                                                            <div class="listingPrice__numbers"><span class="listingPrice__finalPrice">₹999</span><span class="listingPrice__slashedPrice">₹2791</span><span class="listingPrice__percentage">64% off</span></div>
+                                                            <div class="listingPrice__perRoomNight">per room per night</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price-row">
+                                                        <button class="h-btn" type="button"><span>View Details</span></button>
+                                                        <button class="h-btn h-btn-primary" type="button"><span>Book Now</span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="items">
+                                    <div class="hotel-block">
+                                        <figure>
+                                            <img src="img/h-img.png" alt="" title="" class="img-responsive full-width" />
+                                        </figure>
+                                        <div class="hotel-block__detail">
+                                            <div class="hotel-block__wrap">
+                                                <h2>Collection O 343434 Hotel</h2>
+                                                <div class="tag-maker">
+                                                    <span>Doda, Doda</span><span> <i class="fa fa-map-marker"></i> 0.9 KM </span>
+                                                </div>
+                                                <div class="hotel-block-des">
+                                                    <p>
+                                                        Growing clinical evidence 
+                                                    </p>
+                                                </div>
+                                                <div class="hotelRating">
+                                                    <span class="hotelRating__rating--excellent">4.5 <i class="fa fa-star"></i></span>
+                                                    <span class="hotelRating__ratingSummary ">(157 Ratings)</span>
+                                                    <span class="hotelRating__ratingSummary">Excellent</span>
+                                                </div>
+                                            </div>
+                                            <div class="hotel-block__bottom">
+                                                <div class="Description__priceBtn">
+                                                    <div class="price-row">
+                                                        <div class="listingPrice">
+                                                            <div class="listingPrice__numbers"><span class="listingPrice__finalPrice">₹999</span><span class="listingPrice__slashedPrice">₹2791</span><span class="listingPrice__percentage">64% off</span></div>
+                                                            <div class="listingPrice__perRoomNight">per room per night</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price-row">
+                                                        <button class="h-btn" type="button"><span>View Details</span></button>
+                                                        <button class="h-btn h-btn-primary" type="button"><span>Book Now</span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="items">
+                                    <div class="hotel-block">
+                                        <figure>
+                                            <img src="img/h-img.png" alt="" title="" class="img-responsive full-width" />
+                                        </figure>
+                                        <div class="hotel-block__detail">
+                                            <div class="hotel-block__wrap">
+                                                <h2>Collection O 343434 Hotel</h2>
+                                                <div class="tag-maker">
+                                                    <span>Doda, Doda</span><span> <i class="fa fa-map-marker"></i> 0.9 KM </span>
+                                                </div>
+                                                <div class="hotel-block-des">
+                                                    <p>
+                                                        Growing clinical evidence 
+                                                    </p>
+                                                </div>
+                                                <div class="hotelRating">
+                                                    <span class="hotelRating__rating--excellent">4.5 <i class="fa fa-star"></i></span>
+                                                    <span class="hotelRating__ratingSummary ">(157 Ratings)</span>
+                                                    <span class="hotelRating__ratingSummary">Excellent</span>
+                                                </div>
+                                            </div>
+                                            <div class="hotel-block__bottom">
+                                                <div class="Description__priceBtn">
+                                                    <div class="price-row">
+                                                        <div class="listingPrice">
+                                                            <div class="listingPrice__numbers"><span class="listingPrice__finalPrice">₹999</span><span class="listingPrice__slashedPrice">₹2791</span><span class="listingPrice__percentage">64% off</span></div>
+                                                            <div class="listingPrice__perRoomNight">per room per night</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price-row">
+                                                        <button class="h-btn" type="button"><span>View Details</span></button>
+                                                        <button class="h-btn h-btn-primary" type="button"><span>Book Now</span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="items">
+                                    <div class="hotel-block">
+                                        <figure>
+                                            <img src="img/h-img.png" alt="" title="" class="img-responsive full-width" />
+                                        </figure>
+                                        <div class="hotel-block__detail">
+                                            <div class="hotel-block__wrap">
+                                                <h2>Collection O 343434 Hotel</h2>
+                                                <div class="tag-maker">
+                                                    <span>Doda, Doda</span><span> <i class="fa fa-map-marker"></i> 0.9 KM </span>
+                                                </div>
+                                                <div class="hotel-block-des">
+                                                    <p>
+                                                        Growing clinical evidence 
+                                                    </p>
+                                                </div>
+                                                <div class="hotelRating">
+                                                    <span class="hotelRating__rating--excellent">4.5 <i class="fa fa-star"></i></span>
+                                                    <span class="hotelRating__ratingSummary ">(157 Ratings)</span>
+                                                    <span class="hotelRating__ratingSummary">Excellent</span>
+                                                </div>
+                                            </div>
+                                            <div class="hotel-block__bottom">
+                                                <div class="Description__priceBtn">
+                                                    <div class="price-row">
+                                                        <div class="listingPrice">
+                                                            <div class="listingPrice__numbers"><span class="listingPrice__finalPrice">₹999</span><span class="listingPrice__slashedPrice">₹2791</span><span class="listingPrice__percentage">64% off</span></div>
+                                                            <div class="listingPrice__perRoomNight">per room per night</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price-row">
+                                                        <button class="h-btn" type="button"><span>View Details</span></button>
+                                                        <button class="h-btn h-btn-primary" type="button"><span>Book Now</span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- section HTML end here -->
+
+        <footer class="footer">
+            <div class="footerTop">
+                <div class="container">
+                    <div class="row ">
+                        <article class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 tm-article">
+                            <h3>Properties </h3>
+                            <ul>
+                                <li> <a href="#">Apartment</a> </li>
+                                <li> <a href="#">Villa</a> </li>
+                                <li> <a href="#">Shared</a> </li>
+                                <li> <a href="#">Office Space</a> </li>
+
+                            </ul>
+
+                        </article>
+                        <article class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 tm-article">
+                            <h3>Services</h3>
+                            <ul>
+                                <li> <a href="#">Labor & Moving</a> </li>
+                                <li> <a href="#">Household Services</a> </li>
+                                <li> <a href="#">Cleaning Services</a> </li>
+                                <li> <a href="#">Computer Services</a> </li>
+
+                            </ul>
+                        </article>
+                        <article class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 tm-article">
+                            <h3>Pages</h3>
+                            <ul>
+                                <li> <a href="#">Restaurants</a> </li>
+                                <li> <a href="#">Hotels</a> </li>
+                                <li> <a href="#">Driving Schools</a> </li>
+                                <li> <a href="#">Cleaning Companies</a> </li>
+
+                            </ul>
+                        </article>
+                        <article class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 tm-article">
+                            <h3>Address</h3>
+                            <p>P.O. Box: 546545646
+                                muscribe 13, Near Al-Bidda Park Doha, Qatar</p>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footerBottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="footer__legal">
+                                <p>Copyright ©2021 All rights reserved to NOJGO.
+                                </p>
+                                <div class="footer__legal-nav">
+                                    <div class="nav-legal">
+                                        <ul class="menu ">
+                                            <li class="first leaf"><a href="#" title="Cookies Policy">Cookies Policy</a>
+                                            </li>
+                                            <li class="last leaf"><a href="#" title="Privacy Policy">Privacy Policy</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- load JS files -->
+    
+    <script src="js/jquery-1.11.3.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/datepicker.min.js"></script>
+    
+    <script src="js/nouislider.js"></script>
+    <script src="js/custom.js"></script>
+   
+
+</body>
+
+</html>

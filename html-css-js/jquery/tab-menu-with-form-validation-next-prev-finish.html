@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Test javascript</title>
+<script src="js/jquery-1.9.1.min.js"> </script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+.container,body{background-color:#fff}
+body{color:#fff;padding:0;margin:0;font-family:arial}
+.container{width:960px;margin:30px auto;color:#333}
+ul.tabs{width:100%}
+ul.tabs,ul.tabs li{padding:0;margin:0;display:inline-block;list-style:none}
+ul.tabs li{color:#333;padding:0;font-size:16px;background-color:#eee;cursor:pointer;border-radius:5px 5px 0 0;width:20%}
+ul.tabs li a{margin:0;padding:15px;display:block;text-align:left;color:#333;text-decoration:none;font-size:18px;line-height:1.2;font-weight:700}
+ul.tabs li.current{background-color:#2184be}
+ul.tabs li.current a{color:#fff}
+.tab-content{font-size:16px;background-color:#eee;padding:20px;display:none;min-height:300px;border-radius:0 5px 5px}
+.tab-content.current{display:inherit;background-color:#2184be;color:#fff}
+.actions{ margin-top:20px;}
+ul.Pagination{ float:right;}
+ul.Pagination, ul.Pagination li{ padding:0; margin:0; list-style:none; }
+ul.Pagination li{ margin-right:10px; display:inline-block; }
+ul.Pagination li:last-child{ margin-right:0;}
+ul.Pagination li a{font-size:16px; display:inline-block; font-weight:bold; border-radius:5px; color:#fff;background-color:#2184be; text-decoration:none; padding:8px 15px; text-align:center;}
+ul.Pagination li.disabled a{ background-color:#eee; color:#aaa; border:1px solid #ddd; cursor:default; display:none;}
+
+/*form css*/
+label{display:inline-block;margin-bottom:.5em}
+input[type=text]{display:block;border:1px solid #ccc;background-color:#fff;height:20px;padding:4px 6px;margin-bottom:10px;font-size:14px;line-height:20px;color:#555;border-radius:4px;box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}
+label.error{color:red;display:inline-block;margin-left:1.5em; display:none;}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <div class="staps">
+    <ul class="tabs">
+      <li class="tab_list current" data-tab="tab-1"><a href="#">1. Account</a></li>
+      <li class="tab_list" data-tab="tab-2"><a href="#">2. Profile</a></li>
+      <li class="tab_list" data-tab="tab-3"><a href="#">3. Hints</a></li>
+      <li class="tab_list" data-tab="tab-4"><a href="#">4. Finish</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="tab-content current" id="tab-1">
+	<form id="account" method="post">
+      <label for="userName">User name *</label>
+      <label for="userName" class="error">This field is required.</label>
+      <input id="userName" name="userName" type="text" class="required error">
+      <label for="password">Password *</label>
+      <label for="password" class="error">This field is required.</label>
+      <input id="password" name="password" type="text" class="required error">
+      <label for="confirm">Confirm Password *</label>
+      <label for="confirm" class="error">This field is required.</label>
+      <input id="confirm" name="confirm" type="text" class="required error">
+      <p>(*) Mandatory</p>
+	  </form>
+    </div>
+    <div class="tab-content" id="tab-2">
+      <label for="name">First name *</label>
+      <input id="name" name="name" type="text" class="required">
+      <label for="surname">Last name *</label>
+      <input id="surname" name="surname" type="text" class="required">
+      <label for="email">Email *</label>
+      <input id="email" name="email" type="text" class="required email">
+      <label for="address">Address</label>
+      <input id="address" name="address" type="text">
+      <p>(*) Mandatory</p>
+    </div>
+    <div class="tab-content" id="tab-3">
+      <ul>
+        <li>Foo</li>
+        <li>Bar</li>
+        <li>Foobar</li>
+      </ul>
+    </div>
+    <div class="tab-content" id="tab-4">
+      <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required">
+      <label for="acceptTerms">I agree with the Terms and Conditions.</label>
+    </div>
+  </div>
+  <div class="actions">
+    <ul class="Pagination">
+      <li class="disabled" id="prev"><a href="javascript:void(0)">Previous</a></li>
+      <li class="next" id="next"><a href="javascript:void(0)">Next</a></li>
+      <li class="disabled" id="finish"><a href="javascript:void(0)">Finish</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- container --> 
+
+<script type="text/javascript">
+
+
+function validateTab1(){
+				var name = $('#userName').val().trim();
+				var password = $('#password').val();
+				var confirm = $('#userName').val();
+				var flag = true;
+				
+				if(name == '' || !isNaN(name)){
+				   $(this).prev('.error').show();
+				   flag = false;
+				}else{
+				  $(this).prev('.error').hide();
+				}
+				alert('hell'+name+'hi'+flag);
+				return flag;
+
+}
+
+$(document).ready(function() {
+
+	/*$('ul.tabs li').on('click', function(){
+		var tab_id = $(this).attr('data-tab');
+		 localStorage.setItem('tab', tab_id);
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+		
+		$(this).addClass('current');
+		$('#'+tab_id).addClass('current');
+	});*/
+	
+	$('.Pagination li').on('click', function(){
+		var button_id = $(this).attr('id');
+		
+		if(button_id == 'next'){			
+			if ($('ul.tabs').find('li.current').next('li').size() > 0){
+					
+				
+				var flag = validateTab1();
+				
+				alert(flag);
+				
+				if(flag == true){
+					$('ul.tabs').find('li.current').addClass('prev').removeClass('current').next('li').addClass('current').prev('li').removeClass('prev');
+					$('#prev').removeClass('disabled');
+					var tab_data = $('ul.tabs').find('li.current').attr('data-tab');
+					$('.content').find('div.current').addClass('con_prev').removeClass('current').next('div').addClass('current').prev('div').removeClass('con_prev');
+				}
+				
+				
+
+			
+			
+			
+			}else{
+				$('#next').hide(300);
+				$('#finish').removeClass('disabled');
+				$('#finish').click(function(){
+					window.location = 'file:///C:/Users/Bipin/Desktop/mix_html/mini-projects-exm/menu.html';
+				});
+			}			
+		}else if(button_id == 'prev'){
+			if($('ul.tabs').find('li.current').prev('li').size() >0){
+				$('ul.tabs').find('li.current').addClass('prev').removeClass('current').prev('li').addClass('current').prev('li').removeClass('prev');
+				
+				var tab_data = $('ul.tabs').find('li.current').attr('data-tab');
+				$('.content').find('div.current').addClass('con_prev').removeClass('current').prev('div').addClass('current').prev('div').removeClass('con_prev');
+			
+			}
+		
+		}
+	 
+	
+	});
+	
+
+});
+
+
+
+
+</script>
+</body>
+</html>

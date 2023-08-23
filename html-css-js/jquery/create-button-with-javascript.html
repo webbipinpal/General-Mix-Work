@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Three form animations</title>
+<script src="js/jquery-1.9.1.min.js"> </script>
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+	font-size: 62.5%
+}
+body {
+	height: 100%;
+	background-color: #FFFFFF;
+	font: 1.2em Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+</style>
+
+</head>
+
+<body>
+<div class="wrapper">
+<button id="create-btn">Create another button</button>
+  </div>
+  
+<script type="text/javascript">
+$(document).ready(function(){
+	var i = 0;
+	$('#create-btn').click(function(){
+		i++;
+		if(i<=10){
+			$('<button class="btn'+i+'">button'+i+'</button>').appendTo('body');
+		}else{
+			alert('ho gya bahi counting nahi aai h kya');
+		}
+	
+	});
+
+
+
+});
+
+
+
+</script>
+
+</body>
+</html>

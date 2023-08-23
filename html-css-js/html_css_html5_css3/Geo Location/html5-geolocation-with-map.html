@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>HTML 5 Geolocation </title>
+
+</head>
+
+<body>
+<p id="demo">I am going to use HTML5 GeoLocation Api with Error</p>
+
+<button onclick="getLocation()"> Get Location With Error </button>
+
+<div id="mapholder"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<script>
+
+var a = document.getElementById('demo');
+function getLocation(){
+	if(navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(showPosition, showError);	
+	}else{
+		a.innerHTML = 'Geolocatin is not supported';
+	}
+}
+
+    
+function showPosition(position){
+	lat = position.coords.latitude;
+	lon = position.coords.longitude;	
+	latlon = new google.maps.LatLng(lat, lon)
+	mapholder = document.getElementById('mapholder')
+	mapholder.style.height='500px';
+	mapholder.style.width='500px';
+    
+	var myOption = {
+		center:latlon,zoom:18,
+		mapTypeId:google.maps.MapTypeId.ROADMAP,
+		mapTypeControl:false,
+		navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+	}
+	
+	var map = new google.maps.Map(document.getElementById('mapholder'), myOption);
+	var marker = new google.maps.Marker({position:latlon,map:map,title:'Your are here!'});
+	
+};
+
+function showError(error){
+	switch(error.code){
+		case error.PERMISSION_DENIED:
+		a.innerHTML = 'User denied this locaion.'
+		break;
+		case error.POSITION_UNAVAILABLE:
+		a.innerHTML = 'user position unavailable'
+		break;
+		case error.TIMEOUT:
+		a.innerHTML = 'User request timeout'
+		break;
+		case error.UNKNOWN_ERROR:
+		a.innerHTML = 'An unknown user occured'
+		break;
+		
+	}
+}
+
+</script>
+</body>
+</html>

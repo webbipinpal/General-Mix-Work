@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+<style type="text/css">
+.wrapper{ width:960px; margin:30px auto;}
+input{ padding:5px 8px; border:1px solid #ccc;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+<!--<form ng-app="" name="myForm">
+	Email: <input type="email" name="myAddress" ng-model="text" />
+	<span ng-show="myForm.myAddress.$error.email"> This is not a valid Email Id</span>
+	<p>Enter you email address in the input fields. If angularJS will display error message then you email id is not valid</p>
+</form>
+-->
+
+<form ng-app="" name="myForm">
+	Email: <input type="number" name="myNumber" ng-model="number" />
+	<span ng-show="myForm.myNumber.$error.number"> This is not a valid number</span>
+	<p>Enter you email address in the input fields. If angularJS will display error message then you email id is not valid</p>
+</form>
+
+
+</div>
+</body>
+<html>

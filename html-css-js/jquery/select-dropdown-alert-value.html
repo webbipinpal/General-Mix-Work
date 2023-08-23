@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="js/jquery-1.9.1.min.js"> </script>
+</head>
+
+<body>
+<select name="Color" id="id_Color">
+  <option value="">----Please Select----</option>
+  <option value="Red">Red</option>
+  <option value="Green">Green</option>
+  <option value="Blue">Blue</option>
+  <option value="White">White</option>
+</select>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	$('#id_Color').on('change', function(){
+		var a = $('#id_Color').val();		 
+		 alert(a);
+	});
+	
+	
+});
+
+
+</script>
+
+
+</body>
+</html>

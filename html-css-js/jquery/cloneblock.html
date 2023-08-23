@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>clone</title>
+  <style>
+  .block{
+    position: relative;
+    background-color: #abc;
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin: 5px;
+  }
+  </style>
+ <script src="../slideshow/engine1/jquery.js"></script>
+</head>
+<body>
+<div id="block"></div>
+<div class="container">
+  <div class="hello">Hello</div>
+  <div class="goodbye">Goodbye</div>
+</div> 
+<script>
+$( ".hello" ).appendTo( ".goodbye" );
+</script>
+ 
+</body>
+</html>

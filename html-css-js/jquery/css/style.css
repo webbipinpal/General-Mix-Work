@@ -1,0 +1,116 @@
+html {font-family: arial, 'sans-serif'; -ms-text-size-adjust: 100%;  -webkit-text-size-adjust: 100%; }
+body {margin: 0;}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary { display: block;}
+audio,
+canvas,
+progress,
+video {display: inline-block; vertical-align: baseline; }
+audio:not([controls]) {  display: none;  height: 0;}
+[hidden],
+template {  display: none;}
+a { background-color: transparent;}
+a:active,
+a:hover { outline: 0;}
+abbr[title] { border-bottom: 1px dotted;}
+b,
+strong {font-weight: bold;}
+dfn {font-style: italic;}
+h1 {font-size: 2em; margin: 0.67em 0;}
+mark{background: #ff0; color: #000;}
+small { font-size: 80%;}
+sub,
+sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;}
+sup { top: -0.5em;}
+sub { bottom: -0.25em;}
+img {  border: 0;}
+figure {  margin: 1em 40px;}
+hr { -moz-box-sizing: content-box;  box-sizing: content-box;  height: 0;}
+pre { overflow: auto;}
+code,
+kbd,
+pre,
+samp { font-family: monospace, monospace;  font-size: 1em;}
+button,
+input,
+optgroup,
+select,
+textarea {color: inherit; font: inherit;  margin: 0;}
+button {overflow: visible;}
+button,
+select { text-transform: none;}
+button,
+html input[type="button"], 
+input[type="reset"],
+input[type="submit"] {-webkit-appearance: button; cursor: pointer;}
+button[disabled],
+html input[disabled] { cursor: default;}
+button::-moz-focus-inner,
+input::-moz-focus-inner {border: 0; padding: 0;}
+input {line-height: normal;}
+input[type="checkbox"],
+input[type="radio"] { box-sizing: border-box;  padding: 0;}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { height: auto;}
+input[type="search"] {-webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box;}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none;}
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em;}
+legend {border: 0; padding: 0;}
+textarea { overflow: auto;}
+optgroup { font-weight: bold;}
+table {border-collapse: collapse; border-spacing: 0;}
+td,
+th {padding: 0;}
+
+/*========== start template css here========*/
+.container{ padding:0; margin:0px; width:100%; box-sizing: border-box;}
+.header{ background-color:#06121B; position:relative; overflow:hidden; padding:20px; border-bottom:1px solid #343C43;}
+.logo{ font-size:21px; font-weight:bold; color:#0095EB; text-align:center; float:left;}
+
+/*------Navigation css start here-------*/
+.main-nav{ clear:both;}
+.responsive-menu-toggle-icon{ height:20px; width:20px; position:absolute; right:0; top:13px; padding:10px; display:inline-block;}
+.responsive-menu-toggle-icon .toggle-icon{ color:#0095EB; font-size:18px;}
+
+.site-nav{ padding:0; display:none;}
+.site-nav.disable-menu{display:block; }
+
+.site-nav ul, .site-nav ul li{ padding:0; margin:0; list-style:none; } 
+.site-nav ul li{ position:relative; border-bottom:1px solid #999; background-color:#27445a;}
+.site-nav ul li:hover{ background-color:#1e3546;}
+.site-nav ul li a{ color:#9d9d9d; padding:20px; display:inline-block; text-decoration:none; width:100%; box-sizing: border-box;}
+.site-nav ul li a:hover{ color:#fff;}
+/*.site-nav ul li > ul{ display:none;}*/
+/*.site-nav ul li:hover > ul{ display:block;}*/
+.site-nav ul li > ul li{ position:relative; display:block;}
+.site-nav ul li > ul li a{ display:block; color:#9d9d9d; padding-left:35px;}
+.site-nav ul li > ul li a:hover{ color:#fff;}
+/*.site-nav ul li > ul li > ul{display:none;}
+.site-nav ul li > ul li:hover > ul{ display:block;}*/
+.site-nav ul li > ul li > ul li a{ padding-left:50px;}
+
+.site-nav ul li.collopsed > ul{  display:none;}
+.site-nav ul li.collopsed.expanded > ul{ display:block;}
+.site-nav ul li.collopsed > a.parent-list, .site-nav ul li.expanded > a.parent-list{ background:url(../images/drop_arrow.png); background-repeat:no-repeat;}
+.site-nav ul li.collopsed > a.parent-list{background-position:right 2%;}
+.site-nav ul li.expanded > a.parent-list{background-position:right 88%;}
+
+/*------Navigation css End here-------*/
+
+@media all and(min-width:48em){
+	
+.site-nav ul li{ display:inline-block;}	
+}
+

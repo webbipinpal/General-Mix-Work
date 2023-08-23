@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+<style type="text/css">
+.wrapper{ width:960px; margin:30px auto;}
+input{ padding:5px 8px; border:1px solid #ccc;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+<div ng-app="myapp" ng-controller="personCtrl">
+
+<p>My name is {{firstName | uppercase}}</p>
+
+</div>
+</div>
+<script>
+angular.module('myapp', []).controller('personCtrl', function($scope){
+	$scope.firstName= "Bipin",
+	$scope.lastName= "Pal"
+
+});
+</script>
+</body>
+<html>

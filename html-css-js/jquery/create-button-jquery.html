@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script src="js/jquery-1.9.1.min.js"> </script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+body{ padding:0; margin:0;}
+
+
+</style>
+</head>
+<body>
+	<div class="wrapper">
+	<button id="create-btn" >reate Button</button>
+	</div>
+<script type="text/javascript">
+$('document').ready(function(){
+	var i = 0;
+	$('#create-btn').click(function(){
+	
+		if(i<10){
+			i++;
+			$('<button class="btn'+i+'">button' + i +'</button>').appendTo('.wrapper');
+		}else{
+			alert('ruk ja dost ho gya 10')
+		}
+	});
+
+
+});
+
+</script>
+	
+</body>
+</html>

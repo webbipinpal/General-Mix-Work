@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+<style type="text/css">
+.wrapper{ width:960px; margin:30px auto;}
+input{ padding:5px 8px; border:1px solid #ccc;}
+</style>
+</head>
+<body>
+<div class="wrapper">	
+	<ul ng-app="myApp" ng-controller="customFilter">
+		<li ng-repeat="x in names">
+			{{x | myFilter}}
+		</li>
+	</ul>
+</div>
+
+<script>
+	var app = angular.module('myApp', []);
+	app.filter('myFilter', function(){
+		return function(x){
+			var i, c, text = "";
+			for(i=0; i < x.length; i++){
+				c = x[i];
+				if(i % 2 == 0){
+				c = c.toUpperCase();				
+				}
+				text += c;
+			}
+			return text;
+		};
+	});
+
+	app.controller('customFilter', function($scope){
+		$scope.names = [
+			'Name',
+			'Bipin',
+			'Kumar',
+			'Pal',
+			'End'
+		
+		]
+	});
+</script>
+</body>
+<html>

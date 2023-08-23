@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html manifest="cache.appcache">
+<head>
+<meta charset="utf-8" />
+<title>Test</title>
+<script src="../slideshow/engine1/jquery.js"></script>
+<script>
+$("document").ready(function(){
+
+/*$("#click").click(function(){
+$("#tab").animate({
+"left":"150px",
+"width":"250px",
+"opacity":"0.5",
+"background-color":"blue"
+}, 4000, function() {
+    alert("end");
+  });
+});
+*/
+/*$( "#click" ).click(function() {
+  $( "#tab" ).animate({
+    width: [ "toggle", "swing" ],
+    height: [ "toggle", "swing" ],
+    opacity: "toggle"
+  }, 5000, "linear", function() {
+    $( this ).after( "<div>Animation complete.</div>" );
+  });
+});*/
+
+$( "#click" ).click(function() {
+  $( "#tab" ).animate({
+    width: "toggle",
+    height: "toggle"
+  },{
+    duration: 5000,
+    specialEasing: {
+      width: "linear",
+      height: "easeOutBounce"
+    },
+    complete: function() {
+      $( this ).after( "<div>Animation complete.</div>" );
+    }
+  });
+});
+
+});
+
+</script>
+<style>
+body {
+	padding:0px;
+	margin:0px;
+	margin:20px 0;
+}
+section{ width:960px; margin:0 auto;}
+#tab{
+	width:100px;
+	height:100px;
+	background-color:#f00;
+	}
+</style>
+</head>
+<body>
+<section>
+<button id="click">animation</button>
+<article id="tab">
+kjdfkgj;ffg
+</article>
+</section>
+</body>
+</html>

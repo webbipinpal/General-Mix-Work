@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>value</title>
+  <style>
+  div {
+    color: red;
+  }
+  </style>
+  <script src="../slideshow/engine1/jquery.js"></script></head>
+<body>
+ 
+<select id="myselect">
+    <option value="1">Mr</option>
+    <option value="2">Mrs</option>
+    <option value="3">Ms</option>
+    <option value="4">Dr</option>
+    <option value="5">Prof</option>
+</select>
+ 
+<script>
+$("document").ready(function(){
+$( "#myselect option:selected" ).text();
+alert("text");
+
+});
+
+$( "#myselect" ).val();
+// => 1
+
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,49 @@
+<doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>HTML 5 Geolocation </title>
+</head>
+
+<body>
+<p>I am going to use HTML5 GeoLocation Api with Error</p>
+<button onclick="getlocation()"> Get Location With Error </button>
+<p id="demo"></p>
+
+<script>
+
+var a = document.getElementById('demo');
+function getlocation(){
+	if(navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(showPosition, showError);	
+	}else{
+		a.innerHTML = 'Geolocatin is not supported';
+	}
+}
+
+function showPosition(position){
+	a.innerHTML= 'Latitude:' + position.coords.latitude + '<br /> Longitude :' + position.coords.longitude;
+};
+
+function showError(error){
+	switch(error.code){
+		case error.permission_denied:
+		a.innerHTML = 'User denied this locaion.'
+		break;
+		case error.position_unavailable:
+		a.innerHTML = 'user position unavailable'
+		break;
+		case error.timeout:
+		a.innerHTML = 'User request timeout'
+		break;
+		case error.unknown_error:
+		a.innerHTML = 'An unknown user occured'
+		break;
+		
+	}
+}
+
+</script>
+</body>
+</html>

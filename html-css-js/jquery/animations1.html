@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script src="js/jquery-1.9.1.min.js"> </script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+body{ padding:20px; margin:0;}
+.container{ width:300px; background-color:#000; color:#fff; height:auto; padding:10px;}
+
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Bipin Kumar Pal</h1>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+
+</div>
+<br />
+<br />
+<button>increase</button>	
+<script type="text/javascript">
+
+/*$('button').click(function(){
+ $('.container').animate({
+	'marginLeft':'100px',
+	'fontSize': '+=10px',
+	'width': '+=200px'
+ 
+ }, 500, 'swing');
+
+});*/
+
+
+$('button').click(function(){
+ $('.container').animate({
+	'height':'toggle'
+ 
+ }, 500, 'swing');
+
+});
+
+
+
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+<style type="text/css">
+.wrapper{ width:960px; margin:30px auto;}
+input{ padding:5px 8px; border:1px solid #ccc;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+	<div ng-app="myApp" ng-controller="nameCtrl">
+		<ul>
+			<li ng-repeat="x in name | filter : 'P'">
+				{{x}}
+			</li>
+		</ul>
+	</div>
+
+</div>
+<script>
+	angular.module('myApp', []).controller('nameCtrl', function($scope){
+		$scope.name = [
+			'Bip',
+			'Bipin',
+			'Kumar',
+			'Pal'
+		]
+	
+	});
+
+</script>
+</body>
+<html>

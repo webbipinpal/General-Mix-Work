@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script src="js/jquery-1.9.1.min.js"> </script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+
+<style type="text/css">
+body {
+	padding: 0;
+	margin: 0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.wrapper{ width:960px; margin:20px auto;}
+#myInput {
+    width: 100%;
+    font-size: 16px; 
+    padding: 12px 20px; 
+    border: 1px solid #ddd; 
+    margin-bottom: 12px; 
+}
+
+#myTable {
+    border-collapse: collapse;
+    width: 100%; 
+    border: 1px solid #ddd; 
+    font-size: 16px;
+}
+
+#myTable th, #myTable td {
+    text-align: left;
+    padding: 12px; 
+}
+
+#myTable tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+ <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Name</th>
+    <th style="width:40%;">Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Berglunds snabbkop</td>
+    <td>Sweden</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Koniglich Essen</td>
+    <td>Germany</td>
+  </tr>
+</table>
+
+</div>
+<script type="text/javascript">
+
+function myFunction(){
+var input, filter, table, tr, td, i;
+input = document.getElementById('myInput');
+filter = input.value.toUpperCase();
+table = document.getElementById('myTable');
+tr = table.getElementsByTagName('tr');
+
+for(i = 0; i < tr.length; i++){
+	td = tr[i].getElementsByTagName('td')[0];
+	
+	if(td){
+		if(td.innerHTML.toUpperCase().indexOf(filter) > -1){
+			tr[i].style.display = "";
+			
+		}else{
+			tr[i].style.display = "none";
+		}
+	}
+}
+
+
+
+};
+</script>
+
+</body>
+</html>

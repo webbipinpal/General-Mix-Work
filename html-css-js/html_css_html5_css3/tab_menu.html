@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html manifest="cache.appcache">
+<head>
+<meta charset="utf-8" />
+<title>Radio tab</title>
+<script>
+
+</script>
+<style>
+body {
+	padding:0px;
+	margin:0px;
+	margin:20px 0;
+}
+ul {
+	padding:0px;
+	margin:0px;
+	position: relative;
+}
+ul li {
+	list-style: none;
+	float: left;
+	vertical-align: middle;
+	text-align: center;
+}
+ul li span {
+	padding:0;
+	margin: 0px 10px;
+	background-color: #0099FF;
+	color: #FFFFFF;
+	cursor: pointer;
+	border-radius: 5px 5px 0 0;
+    display:inline-block;
+    position:absolute;
+    text-align: center;
+    width: 75px;
+    height: 40px;
+    vertical-align: middle;
+    z-index: 0;
+}
+ul li input[type="radio"]{
+    height: 40px;
+    width: 75px;
+    cursor: pointer; 
+    position: relative;
+    z-index: 99;
+    }
+ul li input:checked + div{ display: block;}
+    
+ul li span:hover, ul li span.active {
+	background-color:#00CCFF;
+}
+.tab_container {
+	margin:0 auto;
+	width:500px;
+	height:auto;
+}
+.tab_content {
+	background-color:#00CCFF;
+	position: absolute;
+	padding:15px;
+	width:100%;
+	height:200px;
+	text-align:left;
+	left:0px;
+    top: 40px;
+    display:none;
+}
+.tab1{z-index:15;}
+.tab2{ z-index:11;}
+.tab3{ z-index:12;}
+.tab4{ z-index:13;}
+</style>
+</head>
+<body>
+<section class="tab_container clearfix">
+  <ul>
+    <li> 
+        <span>Home</span>
+        <input type="radio" checked name="tab"/>
+        <div class="tab_content tab1">Tabe 1</div>
+    </li>
+    <li>
+        <span> about</span>
+        <input type="radio" name="tab"/>
+        <div class="tab_content tab2">Tabe 2</div>
+    </li>
+    <li>
+        <span> Profile</span>
+        <input type="radio" name="tab"/>
+        <div class="tab_content tab3">Tabe 3</div>
+    </li>
+    <li>
+        <span> Career</span>
+        <input type="radio" name="tab"/> 
+        <div class="tab_content tab4">Tabe 4</div>
+    </li>
+    <li>
+        <span> Contact</span>
+        <input type="radio" name="tab" />
+        <div class="tab_content tab5">Tabe 5</div>
+    </li>
+  </ul>
+  <span style="clear:both;"></span> 
+</section>
+</body>
+</html>

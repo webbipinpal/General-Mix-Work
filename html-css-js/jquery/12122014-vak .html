@@ -1,0 +1,27 @@
+<html>
+<head>
+<title></title>
+</head>
+
+
+<body>
+
+<script type="text/javascript">
+function check(inputtext){
+ var text = /^[A-Za-z]+$/;
+ if(inputtype.value.match(text)){
+	alert("success");
+	return true;
+ }else{
+ alert('Error please enter text' );
+ return false;
+ }
+ 
+}
+</script>
+
+<h3>label</h3>
+<input type="text" id="inputtext">
+<button onclick = 'check(inputtext);'>validection</button>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Drap Drop HTML5</title>
+<style type="text/css">
+#div1 {
+    width: 500px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+</style>
+<script>
+
+function allowDrop(ev){
+	ev.preventDefault();
+}
+
+function drag(ev){
+	ev.dataTransfer.setData('text', ev.target.id);
+}
+
+function drop(ev){
+	ev.preventDefault();
+	var data = ev.dataTransfer.getData('text');
+	ev.target.appendChild(document.getElementById(data));
+}
+
+</script>
+
+</head>
+<body>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br/>
+<img id="drap1" src="http://c.imgcdn.me/02dc5392f8e02203838a6754584c0334d7859bef/notchwoodland/logo.png" draggable="true" ondragstart="drag(event)"/>
+</body>
+</html>

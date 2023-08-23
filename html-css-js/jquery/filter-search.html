@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script src="js/jquery-1.9.1.min.js"> </script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+
+<script type="text/javascript">
+
+	function myFunction(){
+		var input, filter, ul, li, a, i;
+		input = document.getElementById("myInput");
+		filter = input.value.toUpperCase();
+		ul = document.getElementById("myUL");
+		li = ul.getElementsByTagName("li");
+		
+		for (i = 0; i < li.length; i++) {
+			a = li[i].getElementsByTagName("a")[0];
+			if(a.innerHTML.toUpperCase().indexOf(filter) > -1){
+				li[i].style.display = "";
+			}else{
+				li[i].style.display = "none";	
+			}			
+		}		
+	}
+	
+
+</script>
+<style type="text/css">
+body {
+	padding: 0;
+	margin: 0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.wrapper{ width:960px; margin:20px auto;}
+
+#myInput {
+   
+    background-position: 10px 12px; 
+    background-repeat: no-repeat; 
+    width: 100%; 
+    font-size: 16px;
+    padding: 12px 20px 12px 40px; 
+    border: 1px solid #ddd; 
+    margin-bottom: 12px; 
+}
+
+#myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a {
+    border: 1px solid #ddd;
+    margin-top: -1px;
+    background-color: #f6f6f6; 
+    padding: 12px;
+    text-decoration: none; 
+    font-size: 18px;
+    color: black; 
+    display: block; 
+}
+
+#myUL li a.header {
+    background-color: #e2e2e2; 
+    cursor: default; 
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+ <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+<ul id="myUL">
+  <li><a href="#" class="header">A</a></li>
+  <li><a href="#">Adele</a></li>
+  <li><a href="#">Agnes</a></li>
+
+  <li><a href="#" class="header">B</a></li>
+  <li><a href="#">Billy</a></li>
+  <li><a href="#">Bob</a></li>
+
+  <li><a href="#" class="header">C</a></li>
+  <li><a href="#">Calvin</a></li>
+  <li><a href="#">Christina</a></li>
+  <li><a href="#">Cindy</a></li>
+</ul>
+
+</div>
+
+
+</body>
+</html>

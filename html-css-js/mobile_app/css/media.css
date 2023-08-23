@@ -1,0 +1,163 @@
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+h1{ font-size:18px;}
+h2{ font-size:15px;}
+.progress{ height:10px;}
+.navbar-toggle .icon-bar{height:3px; width:22px;}
+.back_btn, .submit_btn{ font-size:14px;}
+.font_size30{ font-size:15px;}
+.font_size20{ font-size:12px;}
+/*login page*/
+.btn-lg_custom, .input-block-level,
+.for_password-link, .sign_up label{ font-size:15px;}
+/*landing page*/
+.exchange_rate .today_limit{ font-size:15px;}
+.exchange_rate .today_rate{ font-size:15px;}
+.landing_contenter_icon ul li a{ font-size:12px;}
+/*transaction history page*/
+.header_bor h2, .header_bor h1{ font-size:16px;}
+.cancel{ padding:0px; margin:0px; font-size:16px;}
+.submit{ padding:0px; margin:0px; font-size:16px;}
+.see_all{ font-size:15px;}
+.all_users_pro_display h2{ font-size:15px;}
+.all_users_pro_display .users_short_profile{ font-size:12px; line-height:14px;}
+/*transaction history page*/
+.transaction_detail h2{ font-size:16px;}
+.transaction_detail .tr_sm_info li{ font-size:14px;}
+.transaction_detail .tr_xs_info li{ font-size:14px;}
+.transaction_detail h3{ font-size:15px;}
+.middem-font {font-size: 12px;}
+/*Replace Transaction details css start here*/
+
+/*users agre css start here*/
+#users_agreement aside h3{  font-size:18px; font-weight:bold;}
+#users_agreement aside h4{ font-size:15px; font-weight:bold;}
+#users_agreement aside p{ font-size:15px;}
+}
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 480px) {
+h1{ font-size:18px;}
+h2{ font-size:15px;}
+.navbar-toggle .icon-bar{height:3px; width:22px;}
+.back_btn, .submit_btn{ font-size:14px;}
+.font_size30{ font-size:15px;}
+.font_size20{ font-size:12px;}
+
+/*login page*/
+.btn-lg_custom, .input-block-level,
+.for_password-link, .sign_up label{ font-size:15px;}
+/*landing page*/
+.progress{ height:10px;}
+.exchange_rate .today_limit{ font-size:15px;}
+.exchange_rate .today_rate{ font-size:15px;}
+.landing_contenter_icon ul li a{ font-size:12px;}
+/*transaction history page*/
+.header_bor h2, .header_bor h1{ font-size:16px;}
+.cancel{ padding:0px; margin:0px; font-size:16px;}
+.submit{ padding:0px; margin:0px; font-size:16px;}
+.see_all{ font-size:15px;}
+.all_users_pro_block h2{ font-size:15px;}
+.all_users_pro_block .users_short_profile{ font-size:12px; line-height:14px;}
+/*transaction history page*/
+.transaction_detail h2{ font-size:16px;}
+.transaction_detail .tr_sm_info li{ font-size:14px;}
+.transaction_detail .tr_xs_info li{ font-size:14px;}
+.transaction_detail h3{ font-size:15px;}
+.middem-font {font-size: 12px;}
+/*Replace Transaction details css start here*/
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+
+}
+
+@media only screen 
+and (min-width : 480px) 
+and (max-width : 640px) {
+
+/*login page*/	
+.btn-lg_custom, .input-block-level,
+.for_password-link, .sign_up label{ font-size:18px;}
+/*landing page*/
+.exchange_rate .today_limit{ font-size:20px;}
+.exchange_rate .today_rate{ font-size:25px;}
+.landing_contenter_icon ul li a{ font-size:17px;}
+/*transaction history page*/
+.cancel{ padding:0px; margin:0px; font-size:22px;}
+.submit{ padding:0px; margin:0px; font-size:22px;}
+.see_all{ font-size:22px;}
+.all_users_pro_block h2{ font-size:22px;}
+.all_users_pro_block .users_short_profile{ font-size:14px; line-height:16px;}
+
+/*Replace Transaction details css start here*/
+.acc_no_con{ padding-top:4.6875%;}
+}
+@media only screen 
+and (min-width : 480px) 
+and (max-width : 568px) {
+h2{ font-size:26px;}
+.middem-font{font-size: 20px;}
+.font_size30{ font-size:22px;}
+.font_size20{ font-size:15px;}
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/*login page start here*/
+.login_padder {padding: 12.7% 0;}
+/*login page close here*/
+/*landing / home page start here*/
+.landing_contenter_icon ul li a{padding:4.8% 5% 4.8%;}
+.progress {height: 12px;}
+.exchange_rate{padding-top:2.5%;padding-bottom:2.5%;}
+#landing header {font-size: 15px; padding:4.7%;}
+/*landing / home page close here*/
+
+}

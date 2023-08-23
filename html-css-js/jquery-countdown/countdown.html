@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Timmer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+  <script src="jquery.countdown.js"> </script>
+	<style>
+		* {
+		  margin: 0;
+		  padding: 0;
+		  box-sizing: border-box;
+		}
+
+		html, body {
+		  height: 100%;
+		  width: 100%;
+		}
+
+		body {
+		}
+
+#countdown {
+  color: #1e1656;
+  display: inline-block;
+  padding: 30px;
+  border-radius: 4px;
+}
+#countdown .countdown_list {
+  display: inline-block;
+  padding-right: 30px;
+  margin-right: 30px;
+  position: relative;
+}
+#countdown .countdown_list:last-child{
+  padding-right: 0px;
+  margin-right: 0px;
+}
+#countdown .countdown_list:before{
+  content: ':';
+  position: absolute;
+  right: -7px;
+  top: 50%;
+  transform: translate(0%, -50%);
+  color: #1e1656;
+  font-size: 3rem;
+}
+#countdown .countdown_list:last-child:before{
+  display: none;
+}
+#countdown span {
+  padding: 0px;
+  border-radius: 0;
+  display: block;
+  font-size: 1.2rem;
+}
+#countdown span.number {
+  font-size: 108px;
+  font-weight: bold;
+}
+#countdown .smalltext {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+
+	</style>
+</head>                                
+<body>
+  <div id="countdown"></div>
+  <script>
+    $('#countdown').countdown('2024/10/10').on('update.countdown', function(event) {
+  var $this = $(this).html(event.strftime(''
+    + '<div class="countdown_list"> <span class="countdown--days number">%-d</span> <span class="countdown--days-text smalltext">day%!d</span></div>'
+    + '<div class="countdown_list"> <span class="countdown--hours number">%H</span> <span class="countdown--hours-text smalltext">Hours </span></div>'
+    + '<div class="countdown_list"> <span class="countdown--minutes number">%M</span> <span class="countdown--minutes-text smalltext"> Minutes </span></div>' 
+    + '<div class="countdown_list"> <span class="countdown--seconds number">%S</span> <span class="countdown--seconds-text smalltext"> Seconds </span></div>'));
+});
+  </script>
+  
+</body>
+</html>

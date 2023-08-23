@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script src="js/jquery-1.9.1.min.js"> </script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+body{ padding:0; margin:0;}
+.wrapper{ width:960px; margin:50px auto;}
+.loader{ 
+width:140px;
+height:140px;
+border:15px solid #ccc;
+border-top:15px solid blue;
+border-radius:50%;
+animation: loader 2s linear infinite;
+-webkit-animation: loader 2s linear infinite;
+}
+@-webkit-keyframes loader{
+0%{ -webkit-transform:rotate(0deg)}
+100%{ -webkit-transform:rotate(360deg)}
+
+}
+
+@keyframes loader{
+0%{ -webkit-transform:rotate(0deg)}
+100%{ -webkit-transform:rotate(360deg)}
+
+}
+
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+<div class="loader"></div>	
+<script type="text/javascript">
+
+
+</script>
+	
+</body>
+</html>

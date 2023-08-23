@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_PAMPATIBAL">
+<title>Carousel Slideshow</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+  </style>
+</head>
+
+<body>
+<div class="container">
+   <div id="myCarousel" class="carousel slide" >
+    <!--<div id="myCarousel" class="carousel slide" data-ride="carousel">
+       indicators Start here
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active">  </li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>-->
+        <ol class="carousel-indicators">
+            <li class="item1 active">  </li>
+            <li class="item2"></li>
+            <li class="item3"></li>
+            <li class="item4"></li>
+        </ol>
+        <!--indicators End here-->
+        <!--wrapper for slideshow Start here--->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="images/img_lights_wide.jpg" alt="carousel image" width="1000" height="350" />
+                <div class="carousel-caption">
+                    <h2>Slideshow One</h2>
+                    <p>Slideshow test text</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/img_fjords_wide.jpg" alt="carousel image" width="1000" height="350" />
+                <div class="carousel-caption">
+                    <h2>Slideshow Two</h2>
+                    <p>Slideshow test text</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/img_fjords_wide.jpg" alt="carousel image" width="1000" height="350" />
+                <div class="carousel-caption">
+                    <h2>Slideshow Three</h2>
+                    <p>Slideshow test text</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/img_fjords_wide.jpg" alt="carousel image" width="1000" height="350" />
+                <div class="carousel-caption">
+                    <h2>Slideshow four</h2>
+                    <p>Slideshow test text</p>
+                </div>
+            </div>
+        </div>
+        <!--wrapper for slideshow Ends here--->
+        
+    </div>
+</div>
+<script>
+    $('document').ready(function(){
+        $('#myCarousel').carousel({interval: 100});
+        
+        $('.item1').click(function(){
+            $('#myCarousel').carousel(0);
+        });
+        
+        $('.item2').click(function(){
+            $('#myCarousel').carousel(1);
+        });
+        $('.item3').click(function(){
+            $('#myCarousel').carousel(2);
+        });
+        $('.item4').click(function(){
+            $('#myCarousel').carousel(3);
+        });
+        
+    });
+    
+</script>
+
+</body>
+</html>

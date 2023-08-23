@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+<style type="text/css">
+.wrapper{ width:960px; margin:30px auto;}
+input{ padding:5px 8px; border:1px solid #ccc;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+	<div ng-app="myAngular" ng-controller="nameCtrl">
+		<p>This is my first loop list</p>
+		<ul>
+			<li ng-repeat="x in name | orderBy:'state'">
+				{{x.name + ', ' + x.state}}
+			</li>
+		</ul>
+	</div>
+</div>
+<script>
+angular.module('myAngular', []).controller('nameCtrl', function($scope){
+	$scope.name=[
+		{name:'bipin', state:'Bihar'},
+		{name:'Kumar', state:'Delhi'},
+		{name:'Pal', state:'Bihar'},
+		{name:'UI&UX Designer', state:'Delhi'},
+		{name:'current', state:'Delhi'},
+		{name:'permanente', state:'Bihar'}	
+	];
+});
+
+
+</script>
+</body>
+<html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+p:first-line{
+	color:#0000CC;
+}
+p:first-letter{ font-size:20px; font-style:italic;}
+p::selection {
+color: #000;
+background-color: red;
+}
+div::selection {
+color: #FFFFFF;
+background-color: #000;
+}
+a[href="http://www.cafesoylentgreen.com"]{
+color:red;
+font-weight:bold;
+}
+a[href^="http://"], a[href^="https://"]{ background-color:#FF0000; color:#00CC66;}
+
+a[href$=".pdf"]{
+background-color:#000000; color:#FFFFFF;
+}
+ul:nth-child(odd){
+	color:red;
+	border:1px solid #000;
+	}
+table tr:nth-child(2n+3) { background-color: ; }
+tr td:nth-child(1n+3) { background-color:#900; }
+ul:last-of-type{ color:#FFFF00;}
+
+
+.byline a { color: red; }
+p .email { color: blue; }
+
+</style>
+</head>
+
+<body>
+<a href="https://www.cafesoylentgreen.com">www.cafesoylentgreen.com</a>
+<a href="www.google.com">www.google.com</a>
+<a href="https://www.yahoo.com">www.yahoo.com</a>
+<a href="http://www.facebook.com">www.facebook.com</a>
+
+<p>bipin kumar pal <br>
+bipin kumar pal<br> 
+bipin kumar pal <br>
+bipin kumar pal <br>
+bipin kumar pal<br>
+<a href="https://www.yahoo.pdf">www.yahoo.com</a>
+<a href="http://www.facebook.pdf">www.facebook.com</a>
+ </p>
+ 
+<div>bipin kumar pal <br>
+bipin kumar pal<br> 
+bipin kumar pal <br>
+bipin kumar pal <br>
+bipin kumar pal<br>
+ </div>
+ 
+<ul class="parent">
+<li>bipin kumar pal</li> 
+<p>bipin</p>
+<li>bipin kumar pal </li>
+<li>bipin kumar pal </li>
+<p>kumar</p>
+<li>bipin kumar pal</li>
+<p>kumar</p>
+ </ul>
+
+
+<table>
+	<tr>
+    <td>ram</td>
+    <td>ram</td>
+    <td>ram</td>
+        <td>ram</td>
+    <td>ram</td>
+    <td>ram</td>
+    </tr>
+    	<tr>
+    <td>ram</td>
+    <td>ram</td>
+    <td>ram</td>
+        <td>ram</td>
+    <td>ram</td>
+    <td>ram</td>
+    </tr>
+    	<tr>
+    <td>ram</td>
+        <td>ram</td>
+    <td>ram</td>
+    <td>ram</td>
+    <td>ram</td>
+    <td>ram</td>
+    </tr>
+</table>
+<p class="byline">Written by <a class="email" href="mailto:jean@cosmofarmer.
+com">Jean Graine de Pomme</a></p>
+</body>
+</html>

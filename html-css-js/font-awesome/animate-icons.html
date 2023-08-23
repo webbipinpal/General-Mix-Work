@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script src="js/jquery-1.9.1.min.js"> </script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<style type="text/css">
+body{ padding:0; margin:0;}
+.wrapper{ margin:50px auto; width:960px;}
+#div1 {  font-size:48px;}
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+<div id="div1" class="fa"></div>
+   
+</div>
+
+
+<script>
+    function chargebattery(){
+        var a = document.getElementById('div1');
+        a.innerHTML="&#xf244";
+        setTimeout(function(){
+            a.innerHTML="&#xf243";
+        }, 1000);
+        setTimeout(function(){
+            a.innerHTML="&#xf242";
+        }, 2000);
+        setTimeout(function(){
+            a.innerHTML="&#xf241";
+        }, 3000);
+        setTimeout(function(){
+            a.innerHTML="&#xf240";
+        }, 4000);
+
+         
+        
+    }
+    chargebattery();
+    setInterval(chargebattery, 5000);
+    
+    
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html manifest="cache.appcache">
+<head>
+<meta charset="utf-8" />
+<title>Test</title>
+<script src="../slideshow/engine1/jquery.js"></script>
+<script>
+$(document).ready(function(){
+
+$('button').click(function(){
+$("#divhide").show("slow");
+});
+
+
+$("#close").click(function(){
+$("#divhide").hide("slow");
+});
+						   
+						   
+});
+
+
+</script>
+
+<style>
+.ram{
+	color:#FFF;
+	background-color:#000;
+	padding:10px;
+	
+	}
+
+</style>
+</head>
+<body>
+<section>
+<button>Add Class</button>
+<article id="remove">A web browser built for speed, simplicity, and securityA web browser built for speed, simplicity, and securityA web browser built for speed, simplicity, and security</article>
+
+<div style=" display:none; background-color:#069; width:200px; height:200px;" id="divhide">
+<span id="close">Close</span>
+</div>
+
+</section>
+
+
+
+</body>
+</html>
+

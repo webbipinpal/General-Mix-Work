@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TEST</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<style type="text/css">
+body{ padding:0; margin:0; background-color:f0f0f0;}
+.boxs-section{ width:450px; margin:20px auto;}
+.boxs-section ul, .boxs-section ul li{ padding:0; margin:0; list-style:none; }
+.boxs-section ul li{ float:left; width:100px; height:100px;  border:1px solid #ccc;}
+
+.red-color{ background-color:red;}
+.green-color{background-color:green;}
+.blue-color{background-color:blue;}
+.sky-color{background-color:#3BB9FF;}
+.black-color{background-color:black;}
+.orange-color{background-color:orange;}
+.yellow{ background-color:yellow;}
+
+</style>
+</head>
+
+<body>
+<div class="boxs-section">
+  <ul>
+    <li id="1" class="red"></li>
+    <li id="2" class="blue"></li>
+    <li id="3" class="green"></li>
+    <li id="4" class="sky"></li>
+    <li id="5" class="orange"></li>
+    <li id="6" class="red"></li>
+    <li id="7" class="black"></li>
+    <li id="8" class="sky"></li>
+    <li id="9" class="green"></li>
+    <li id="10" class="orange"></li>
+    <li id="11" class="blue"></li>
+    <li id="12" class="black"></li>
+  </ul>
+</div>
+
+<script type="text/javascript">
+var first = null;
+var second = null;
+var firsttagid = null;
+var secondtagid = null;
+$(document).ready(function(){
+	$("li").click(function(){	
+		if(first == null && second == null){
+			var i = $(this).attr("class");
+			var tagid = $(this).attr("id");		
+			firsttagid = tagid;		
+			$(this).addClass( i + '-color');	
+			first = i;			
+		}else{
+			  if(first != null && second == null){		  
+			  var i = $(this).attr("class");
+				var tagid = $(this).attr("id");		
+				secondtagid = tagid;		
+				$(this).addClass( i + '-color');		
+				second = i;
+			   }
+		  }
+
+		  if(first != null && second != null){		  
+			  if(first == second){
+			  setTimeout(
+				function(){    
+				  $('#' + firsttagid).removeClass(first+"-color").addClass('yellow');
+				  $("#"+secondtagid).removeClass(second+"-color").addClass('yellow');
+				  first=null;
+				  second=null;
+				}, 1000);  			
+			  }else{
+				   setTimeout(
+					function(){
+							$('#' + firsttagid).removeClass(first+"-color");
+							$("#"+secondtagid).removeClass(second+"-color");
+							first = null;
+							second = null;
+					  }, 1000); 		  		 
+				  }		  
+		  }		
+	});
+})
+
+
+</script>
+
+</body>
+</html>

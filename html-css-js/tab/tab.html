@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="jquery.js"></script>
+        <script>
+			$( document ).ready(function() {
+				$('.tab-btn li').click(function() {
+					$('.tab-content > li:eq(' + $(this).index() + ')').show();
+					$('.tab-content > li:not(:eq(' + $(this).index() + '))').hide();
+					
+					$('.tab-content > li:eq(' + $(this).index() + ')').addClass('current');
+					$('.tab-content > li:not(:eq(' + $(this).index() + '))').removeClass('current');
+					
+					$('.tab-btn li').removeClass('current');
+					$(this).addClass('current');
+				});
+			});
+		</script>
+		<style>
+			.tab-content li { display:none;}
+		</style>
+    </head>
+    <body>
+        <ul class="tab-btn">
+            <li class="current">Tab 1</li>
+            <li>Tab 2</li>
+            <li>Tab 3</li>
+            <li>Tab 4</li>
+        </ul>
+
+		<ul class="tab-content">
+			<li style="display:block;">Content 1 </li>
+			<li>Content 2 </li>
+			<li>Content 3 </li>
+			<li>Content 4 </li>
+		</ul>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+body{ background-color:#f5f5f5;}
+header{background-color:#fff;}
+.gray{ color:#a3a3a3;}
+.gray_dark{ color:#8d8d8d;}
+.green{ color:#008725;}
+.btn_blue{background-color:#003e7e; color:#fff; border-radius:20px; margin:5px 0}
+.btn_blue:hover{ color:#fff;}
+
+/*login page start here*/
+/*login page input placeholder color*/
+.login_page button.btn-default {color:#4d4d4d !important;}
+.login_page ::-webkit-input-placeholder {color:#4d4d4d !important;}
+.login_page :-moz-placeholder {color:#4d4d4d !important;}
+.login_page ::-moz-placeholder{color:#4d4d4d !important;}
+.login_page :-ms-input-placeholder {color:#4d4d4d !important;}
+/*login page input placeholder color*/
+.for_password-link{ color:#d3e8f0;}
+.for_password-link{
+  text-shadow:
+   -1px -1px 0 #204673,  
+    1px -1px 0 #204673,
+    -1px 1px 0 #204673,
+     1px 1px 0 #204673;
+	}
+.for_password-link:hover, .for_password-link:focus{ color:#d3e8f0; text-decoration:none;}
+.sign_up label{ color:#c2eeff;}
+/*login page start here*/
+/*landing / home page start here */
+#landing header{background-color:#ebebec;}
+#landing header{color:#a3a3a3;}
+.exchange_rate{color:#fff;}
+.exchange_rate h1{color:#e6e7e8;}
+/*landing / home page close here */
+
+/*transaction details page start here */
+.transaction_detail h3{ color:#222;}
+/*transaction details page close here */

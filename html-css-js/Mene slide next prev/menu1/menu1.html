@@ -1,0 +1,132 @@
+<html class="gr__phppot_com" lang="en">
+
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" id="solandra-style-css" href="https://phppot.com/wp-content/themes/solandra/style.css"
+        type="text/css" media="all">
+    <style>
+        #demo-content {
+            padding: 0px 0px 100px 0px;
+        }
+
+        #demo-content table.tutorial-table {
+            table-layout: auto;
+        }
+
+        .tutorial-back a {
+            background: #09f;
+            padding: 10px 10px 10px 20px;
+            margin: 20px 40px 20px 0;
+            color: #fff;
+            display: inline-block;
+            width: 155px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+            position: relative;
+        }
+
+
+
+        .tutorial-back a:before {
+            background: url(https://phppot.com/wp-content/themes/solandra/images/sprite.png) no-repeat 0px 0px;
+            height: 24px;
+            width: 24px;
+            display: inline-flex;
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 15px;
+        }
+
+        .tutorial-back a:hover {
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.50);
+        }
+    </style>
+
+</head>
+
+<body data-gr-c-s-loaded="true">
+    <div class="two-column-content">
+        <div id="tutorial-body">
+            <div id="tutorial">
+                <h1>Demo How to Create Horizontal Scrolling Menu using jQuery and PHP</h1>
+                <div id="demo-content">
+                    <link href="./style.css" rel="stylesheet" type="text/css">
+                    <nav id="menu-container" class="arrow">
+                        <div id="btn-nav-previous" style="fill: #FFF">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                            </svg>
+                        </div>
+                        <div id="btn-nav-next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                            </svg>
+                        </div>
+                        <div class="menu-inner-box">
+                            <div class="menu">
+                                <a class="menu-item" href="#">Home</a>
+                                <a class="menu-item" href="#">Browse</a>
+                                <a class="menu-item" href="#">My Account</a>
+                                <a class="menu-item" href="#">Search</a>
+                                <a class="menu-item" href="#">Settings</a>
+                                <a class="menu-item" href="#">Contact Us</a>
+                                <a class="menu-item" href="#">Products</a>
+                                <a class="menu-item" href="#">Tutorials</a>
+                                <a class="menu-item" href="#">Blog</a>
+                                <a class="menu-item" href="#">Question and Answer</a>
+                                <a class="menu-item" href="#">Feedback</a>
+                                <a class="menu-item" href="#">Services</a>
+                                <a class="menu-item" href="#">Our Clients</a>
+                                <a class="menu-item" href="#">Porfolio</a>
+                                <a class="menu-item" href="#">Tour</a>
+                                <a class="menu-item" href="#">History</a>
+                                <a class="menu-item" href="#">Logout</a>
+                            </div>
+                        </div>
+                    </nav>
+                    <script src="./jquery-3.2.1.min.js"></script>
+                    <script>
+                        $('#btn-nav-previous').click(function () {
+                            $(".menu-inner-box").animate({ scrollLeft: "-=100px" });
+                        });
+
+                        $('#btn-nav-next').click(function () {
+                            $(".menu-inner-box").animate({ scrollLeft: "+=100px" });
+                        });
+                    </script>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        window.addEventListener('click', function (e) {
+            var element = document.getElementsByClassName("search-container")[0];
+            if (!element.contains(e.target) && e.target.id != "mobile-search-icon" && window.innerWidth <= "550") {
+                element.style.display = "none";
+            }
+        });
+        function toggleSearch() {
+            var element = document.getElementsByClassName("search-container")[0];
+            if (element.style.display == 'inline-block') {
+                element.style.display = "none";
+            } else {
+                element.style.display = "inline-block";
+            }
+        }
+    </script>
+</body>
+
+</html>

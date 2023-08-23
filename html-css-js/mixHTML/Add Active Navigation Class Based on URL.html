@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+
+        $(function () {
+            $('li a').click(function () {
+                $('a').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    });
+</script>
+</head>
+<body>
+
+<ul id="nav">
+    <li id="navhome"><a href="#home">Home</a></li>
+    <li id="navmanage"><a href="#manage">Manage</a></li>
+    <li id="navdocso"><a href="#documents">Documents</a></li>
+    <li id="navadmin"><a href="#admin">Admin Panel</a></li>
+    <li id="navpast"><a href="#past">View Past</a></li>
+</ul>
+
+</body>
+</html>

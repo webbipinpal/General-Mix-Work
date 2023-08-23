@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+<style type="text/css">
+.wrapper{ width:960px; margin:30px auto;}
+input{ padding:5px 8px; border:1px solid #ccc;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+	
+	<div ng-app="myApp" ng-controller="searchCtrl">
+    <p>Type a letter in the input field:</p>
+	    <input type="text" ng-model="searchItem" />
+	    <ul>
+	        <li ng-repeat="b in name | filter:searchItem">
+	            {{ b }}
+	        </li>
+	    </ul>
+	</div>
+<p>The list will only consists of names matching the filter.</p>
+</div>
+
+<script>
+    angular.module('myApp', []).controller('searchCtrl', function($scope){
+        $scope.name=[
+            'bipin',
+            'Kumar',
+            'pal',
+            'ram',
+            'shyam',
+            'text',
+            'sdsd',
+            'retertjj',
+            'dfdf14s',
+            'sdsadsd',
+            'brpla'
+        ]
+        
+    });
+
+</script>
+</body>
+<html>

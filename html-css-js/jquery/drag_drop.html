@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style type="text/css">
+ .ui-drop-hover{border:2px solid #bbb;}
+#dragdiv li,#dropdiv li{border:1px solid #bbb;}
+#dropdiv li{padding-left:10px;}
+#maindiv{width:500px;height:350px;border:2px solid #bbb;}
+#allItems,#Ul1{list-style:none;}
+#dragdiv,#dropdiv{width:180px;height:250px;float:left;}
+</style>
+
+</head>
+
+<body>
+
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/ui/1.8.20/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="http://jquery-ui.googlecode.com/svn/tags/latest/external/jquery.bgiframe-2.1.2.js"
+        type="text/javascript"></script>
+    <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/minified/i18n/jquery-ui-i18n.min.js"
+        type="text/javascript"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
+
+
+
+
+ <div id="dragdiv">
+
+<table id="allItems" data-type="server" style=" border-radius:5px; width:500px" border="1" cellpadding="10">
+<tr>
+    <td valign="top">A</td>
+    <td style="color:red"  valign="top">B</td>
+    <td valign="top">C</td>
+</tr>
+<tr>
+    <td valign="top">D</td>
+    <td valign="top">E</td>
+    <td valign="top">F</td>
+</tr>
+<tr>
+    <td valign="top">G</td>
+    <td valign="top">H</td>
+    <td valign="top">I</td>
+</tr>
+</table>
+
+<br/>
+Results : <div id="sortedArray"></div>
+</div>
+<script>
+$(function() {
+
+ jQuery.fn.swap = function(b){ 
+    // method from: http://blog.pengoworks.com/index.cfm/2008/9/24/A-quick-and-dirty-swap-method-for-jQuery
+    b = jQuery(b)[0]; 
+    var a = this[0]; 
+    var t = a.parentNode.insertBefore(document.createTextNode(''), a); 
+    b.parentNode.insertBefore(a, b); 
+    t.parentNode.insertBefore(b, t); 
+    t.parentNode.removeChild(t); 
+    return this; 
+};
+
+
+ $("#allItems td").draggable({
+                appendTo: "body",
+                helper: "clone",
+                cursor: "move",
+                revert: "invalid"
+            });
+
+$( "#allItems td" ).droppable({
+    activeClass: "ui-state-default",
+    hoverClass: "ui-drop-hover",
+    accept: ":not(.ui-sortable-helper)",
+    drop: function( event, ui ) {
+
+        var draggable = ui.draggable, droppable = $(this),
+            dragPos = draggable.position(), dropPos = droppable.position();
+
+        draggable.swap(droppable);
+        var items = [];
+                        $('table#allItems').each(function () {
+                            //var type = $(this).attr('data-type');                            
+                            $(this).find('td').each(function (index, elem) {
+                                items.push(this.innerHTML);
+                            });
+                            //result[type] = items;
+                        });
+                        
+                       // alert(items);
+                         $('#sortedArray').html('['+items.join(',')+']');
+    }
+});
+
+ });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Test javascript</title>
+<script src="js/jquery-1.9.1.min.js"> </script>
+
+<style type="text/css">
+body {
+	background-color: #f1f1f1;
+	color: #fff;
+	padding: 0px;
+	margin: 0px;
+}
+h1{ color:#333;}
+.wrapper {
+	width: 960px;
+	height: auto;
+	margin: 20px auto;
+	background-color: #999;
+	padding: 50px;
+}
+select {
+	padding: 10px;
+	margin-right: 50px;
+}
+.box-container{ width:100%; clear:both; overflow:hidden;}
+.box {
+	width: 250px;
+	padding: 10px;
+	height: 200px;
+	background-color: #fff;
+	color: #333;
+	text-align: center;
+	float: left;
+	margin-right: 30px;
+	margin-top: 30px;
+}
+button {
+	padding: 8px 20px;
+	font-size: 14px;
+	color: #fff;
+	background-color: #000;
+	border: none;
+	cursor: pointer;
+	margin-right: 10px;
+}
+input[type="text"] {
+	padding: 5px 10px;
+	color: #333;
+}
+#edit-box {
+	display: none;
+}
+
+.redirect_button{ display:block; width:100%; margin-top:30px; clear:both;}
+.redirect_button button{ display:inline-block; border:none; background-color:#000; color:#fff; font-size:18px; line-height:1.2; padding:5px 20px; text-decoration:none;}
+.load-img{ position:absolute; background:rgba(0, 0, 0, .5); left:0; right:0; top:0; bottom:0; width:100%; height:100%; display:none;}
+.load-img img{ position:absolute; left:0; right:0; top:50%; bottom:0; margin:-100px auto 0;}
+
+/*Clone line*/
+.clone-text{ background-color:#fff; padding:20px; width:300px; height:auto; margin-top:30px;}
+.clone-text ul{ text-align:left;}
+.clone-text ul, .clone-text ul li{ font-size:16px; color:#333; line-height:1.2; list-style:none; text-align:left; padding:0; margin:0;}
+.clone-text ul li{ margin-bottom:5px;}
+.clone-text button{ margin-top:20px;}
+
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+  <select id="select">
+    <option value="0"> select 1</option>
+    <option value="1"> select 2</option>
+    <option value="2"> select 3</option>
+    <option value="3"> select 4</option>
+    <option value="4"> select 5</option>
+    <option value="5"> select 6</option>
+    <option value="6"> select 7</option>
+  </select>
+  <select id="select-option">
+    <option value="select">Select</option>
+    <option value="yes"> Yes</option>
+    <option value="no"> No</option>
+  </select>
+  
+  <!--edit, delete, or save function -->
+  <div class="box-container">
+   <h1>Edit, Delete, Save </h1>
+    <div class="box">
+      <button id="edit">Edit</button>
+      <button id="delete">Delete</button>
+      <br />
+      <br />
+      <div id="edit-box">
+        <input type="text" placeholder="Please Enter text here" />
+        <button>Save</button>
+      </div>
+    </div>
+    <div class="box">
+      <button id="edit">Edit</button>
+      <button id="delete">Delete</button>
+      <br />
+      <br />
+      <div id="edit-box">
+        <input type="text" placeholder="Please Enter text here" />
+        <button >Save</button>
+      </div>
+    </div>
+    <div class="box">
+      <button id="edit">Edit</button>
+      <button id="delete">Delete</button>
+      <br />
+      <br />
+      <div id="edit-box">
+        <input type="text" placeholder="Please Enter text here" />
+        <button >Save</button>
+      </div>
+    </div>
+  </div>
+  
+  <!--redirect url-->
+  <div class="redirect_button">
+   <h1>Redirect url</h1>
+  <div class="load-img"><img  src="images/loading.gif" /></div>
+  <button id="red-btn">Go to another page</button>
+  </div>
+	<!--Clone line-->
+    <h1>Clone line</h1>
+    <div class="clone-text">
+        <ul>
+        <li>Bipin kumar pal 1</li>
+        <li>Bipin kumar pal 2</li>
+        <li>Bipin kumar pal 3</li>
+        </ul>
+        <button id="clone-btn">Clone line</button>
+    </div>  
+  
+  
+<div style="overflow:hidden; clear:both;"></div>
+</div>
+<script type="text/javascript">
+
+$('document').ready(function() {
+	
+	//select option alert
+	$('#select').on('change', function(){
+		alert($('#select').val());
+	});		
+	$('#select-option').on('change', function(){
+		var x = $('#select-option').val(); 
+		if(x == "yes"){
+			alert('Are you choose yes');
+		}	
+	});
+	
+	//edit, delete, or save function 
+	$('.box button').click(function(){
+		var a = $(this).text();
+		if(a == 'Edit'){
+			alert('Can You Edit This Field');
+			$(this).parent().find('#edit-box').show(300);
+		}else if(a == 'Delete'){
+			alert('Are you conform delete this box');
+			$(this).parent().hide(300);
+		}else if(a == 'Save'){				
+			$(this).parent().hide(300);
+			alert('Are you conform');
+		}
+		
+	});
+	//redirect url
+	$('#red-btn').click(function(){
+		$(this).parent().find('.load-img').show();
+		setTimeout(function(){
+			window.location = 'file:///C:/Users/Bipin/Desktop/mix_html/mini-projects-exm/menu-slide-top-bottom.html';
+		}, 6000);
+	
+	});
+	
+	//Clone line
+	$('#clone-btn').click(function(){
+		$('li').parent().find('li:last').clone().appendTo('ul');
+	});
+
+	
+});
+
+
+</script>
+</body>
+</html>
